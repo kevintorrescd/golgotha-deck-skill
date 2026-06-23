@@ -1,0 +1,20 @@
+{
+  "input": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\examples\\educational-synthetic.html",
+  "format": "html",
+  "generatedAt": "2026-06-23T23:07:46.611Z",
+  "status": "passed",
+  "stats": {
+    "bytes": 4933,
+    "slides": 5
+  },
+  "findings": [
+    {
+      "severity": "info",
+      "code": "manual-visual-review",
+      "message": "HTML overlap requires rendered visual review. Export or open the presentation and inspect every slide before delivery."
+    }
+  ],
+  "artifacts": {
+    "report": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\outputs\\qa\\educational-html\\report.json"
+  }
+}

@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><!-- SKILL: título de la presentación --></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ===========================================================
+       Deck framework — DO NOT EDIT below the "SLOT: theme tokens".
+       =========================================================== */
+    :root {
+      /* SKILL: ajusta solo si la marca cambia. */
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --fg: #111111;
+      --muted: #4B5563;
+      --neutral: #F3F4F6;
+      --border: #E5E7EB;
+      --accent: #00D47E;
+      --accent-deep: #059669;
+      --accent-soft: #ECFDF5;
+      --dark: #111111;
+      --dark-soft: #242424;
+      --shell: #0A0A0A;
+
+      --font-display: 'Montserrat', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      --font-body:    'Inter', 'Montserrat', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      --font-mono:    'JetBrains Mono', 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%; height: 100%; overflow: hidden;
+      background: var(--shell); color: var(--fg);
+      font: 18px/1.5 var(--font-body);
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    }
+    .deck-shell { position: fixed; inset: 0; overflow: hidden; }
+    .deck-stage {
+      width: 1920px; height: 1080px; background: var(--bg);
+      position: relative; transform-origin: top left;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+    }
+    .slide { position: absolute; inset: 0; overflow: hidden; }
+    .slide:not(.active) { display: none !important; }
+    :where(.slide.active) { display: flex; flex-direction: column; }
+    .deck-counter {
+      position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%);
+      display: inline-flex; align-items: center; gap: 4px;
+      background: rgba(10,14,26,0.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      padding: 6px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.08);
+      color: #fff; font: 12px/1 var(--font-mono); letter-spacing: 0.18em; z-index: 1000;
+    }
+    .deck-counter button {
+      width: 36px; height: 36px; background: transparent; color: #fff; border: 0;
+      border-radius: 50%; font-size: 18px; line-height: 1; cursor: pointer;
+      display: grid; place-items: center; transition: background 0.15s;
+    }
+    .deck-counter button:hover { background: rgba(255,255,255,0.12); }
+    .deck-counter button[disabled] { opacity: 0.3; cursor: default; }
+    .deck-counter .deck-count { padding: 0 14px; letter-spacing: 0.22em; }
+    .deck-counter .deck-count .total { color: rgba(255,255,255,0.5); }
+    .deck-hint {
+      position: fixed; bottom: 26px; right: 28px; color: rgba(255,255,255,0.4);
+      font: 11px/1 var(--font-mono); letter-spacing: 0.2em; text-transform: uppercase;
+      z-index: 999; pointer-events: none;
+    }
+    @media print {
+      @page { size: 1920px 1080px; margin: 0; }
+      html, body { width: 1920px !important; height: auto !important; overflow: visible !important; background: #fff !important; }
+      .deck-shell { position: static !important; display: block !important; inset: auto !important; }
+      .deck-stage { width: 1920px !important; height: auto !important; transform: none !important; box-shadow: none !important; position: static !important; }
+      .slide { display: flex !important; position: relative !important; inset: auto !important; width: 1920px !important; height: 1080px !important; page-break-after: always; break-after: page; }
+      .slide:last-child { page-break-after: auto; break-after: auto; }
+      .deck-counter, .deck-hint { display: none !important; }
+    }
+  </style>
+  <style>
+    /* ===========================================================
+       Golgotha Academy — component library
+       =========================================================== */
+
+    /* Background variants */
+    .s-white { background: var(--bg); color: var(--fg); }
+    .s-green { background: linear-gradient(135deg, var(--accent-deep), var(--accent)); color: #fff; }
+    .s-dark  { background: var(--dark); color: #fff; }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.14) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .grid-bg-light {
+      background-image:
+        linear-gradient(rgba(17,17,17,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(17,17,17,0.045) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    /* Logo — use prepared variants from assets/brand. */
+    .brand-mark {
+      position: absolute; top: 56px; height: 44px; width: auto;
+    }
+    .brand-mark.left { left: 72px; }
+    .brand-mark.right { right: 72px; }
+
+    /* Layout */
+    .frame { position: relative; width: 100%; height: 100%; padding: 96px 120px 140px; }
+    .col-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .col-2-wide { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 80px; align-items: center; }
+    .col-2-left { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 80px; align-items: center; }
+
+    /* Typography */
+    .kicker {
+      font-family: var(--font-mono); font-size: 14px; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--accent); margin-bottom: 24px;
+    }
+    .s-green .kicker, .s-dark .kicker { color: rgba(255,255,255,0.72); }
+    .display {
+      font-family: var(--font-display); font-weight: 800; font-size: 112px;
+      line-height: 1.05; letter-spacing: -0.03em; max-width: 14ch;
+    }
+    .display-sm { font-size: 84px; }
+    .h1 { font-family: var(--font-display); font-weight: 700; font-size: 64px; line-height: 1.1; letter-spacing: -0.02em; }
+    .h2 { font-family: var(--font-display); font-weight: 700; font-size: 48px; line-height: 1.15; letter-spacing: -0.02em; }
+    .h3 { font-family: var(--font-display); font-weight: 700; font-size: 32px; line-height: 1.2; letter-spacing: -0.01em; }
+    .body-lg { font-size: 32px; line-height: 1.45; color: var(--muted); max-width: 52ch; }
+    .body { font-size: 24px; line-height: 1.55; color: var(--muted); max-width: 56ch; }
+    .body-sm { font-size: 20px; line-height: 1.6; color: var(--muted); }
+    .s-green .body, .s-green .body-lg, .s-green .body-sm,
+    .s-dark .body, .s-dark .body-lg, .s-dark .body-sm { color: rgba(255,255,255,0.78); }
+    .caption {
+      font-family: var(--font-mono); font-size: 14px; color: var(--muted); letter-spacing: 0.04em;
+    }
+    .s-green .caption, .s-dark .caption { color: rgba(255,255,255,0.55); }
+
+    /* Media */
+    .media-frame {
+      border-radius: 56px; overflow: hidden; background: var(--surface);
+      box-shadow: 0 26px 70px rgba(0,0,0,0.10);
+    }
+    .media-frame img, .media-frame svg { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .placeholder {
+      background:
+        linear-gradient(rgba(17,17,17,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(17,17,17,0.045) 1px, transparent 1px),
+        var(--neutral);
+      background-size: 48px 48px;
+      display: grid; place-items: center; color: var(--muted); font-weight: 600; font-size: 18px;
+      width: 100%; height: 100%; min-height: 160px;
+    }
+    .s-green .placeholder { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.7); }
+    .s-dark .placeholder  { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.45); }
+
+    /* Chart */
+    .chart { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; align-items: end; height: 380px; padding: 0 20px; }
+    .bar-col { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .bar-value { font-family: var(--font-display); font-weight: 700; font-size: 28px; }
+    .bar { width: 100%; max-width: 120px; background: var(--accent-deep); border-radius: 16px 16px 0 0; transform-origin: bottom; }
+    .bar-label { font-size: 18px; color: var(--muted); }
+
+    /* Stat / quote */
+    .stat-huge { font-family: var(--font-display); font-weight: 800; font-size: 180px; line-height: 1; letter-spacing: -0.04em; color: var(--accent); }
+    .s-green .stat-huge, .s-dark .stat-huge { color: #fff; }
+    .quote { font-family: var(--font-display); font-weight: 600; font-size: 64px; line-height: 1.2; letter-spacing: -0.02em; }
+    .quote-mark { color: var(--accent); font-size: 1.3em; margin-right: 8px; }
+    .s-green .quote-mark, .s-dark .quote-mark { color: rgba(255,255,255,0.6); }
+
+    /* Cards */
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 28px; padding: 36px; box-shadow: 0 18px 52px rgba(0,0,0,0.06); }
+    .specimen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
+    .specimen {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 28px;
+      padding: 32px; min-height: 360px; box-shadow: 0 18px 52px rgba(0,0,0,0.06);
+      display: flex; flex-direction: column; gap: 18px;
+    }
+    .specimen .thumb {
+      height: 150px; border-radius: 18px;
+      background:
+        linear-gradient(135deg, rgba(0,212,126,0.18), rgba(5,150,105,0.04)),
+        linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px),
+        linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px);
+      background-size: auto, 28px 28px, 28px 28px;
+      border: 1px solid var(--border);
+    }
+    .specimen .body-sm { margin-top: auto; }
+
+    /* Line chart */
+    .line-chart { width: 100%; height: 360px; }
+    .line-chart svg { width: 100%; height: 100%; overflow: visible; }
+    .line-chart-line { fill: none; stroke: var(--accent); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .line-chart-ref { fill: none; stroke: var(--border); stroke-width: 3; stroke-dasharray: 8 8; }
+    .line-chart circle { fill: var(--accent); stroke: var(--surface); stroke-width: 4; }
+    .line-chart-labels { display: flex; justify-content: space-between; margin-top: 20px; font-family: var(--font-mono); font-size: 14px; color: var(--muted); }
+
+    /* Donut chart */
+    .donut-wrap { display: flex; align-items: center; gap: 80px; }
+    .donut-chart { position: relative; width: 280px; height: 280px; }
+    .donut-chart svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+    .donut-chart circle { transition: stroke-dasharray 0.8s ease; }
+    .donut-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    .donut-value { font-family: var(--font-display); font-weight: 800; font-size: 56px; line-height: 1; letter-spacing: -0.02em; }
+    .donut-label { font-family: var(--font-mono); font-size: 14px; color: var(--muted); margin-top: 8px; }
+    .donut-legend { display: grid; gap: 20px; }
+    .legend-item { display: flex; align-items: center; gap: 14px; font-size: 20px; color: var(--fg); }
+    .legend-dot { width: 16px; height: 16px; border-radius: 50%; }
+    .s-green .donut-value, .s-dark .donut-value { color: #fff; }
+    .s-green .donut-label, .s-dark .donut-label { color: rgba(255,255,255,0.7); }
+    .s-green .legend-item, .s-dark .legend-item { color: #fff; }
+
+    /* Data table */
+    .table-wrap { border: 1px solid var(--border); border-radius: 24px; overflow: hidden; background: var(--surface); }
+    .data-table { width: 100%; border-collapse: collapse; font-size: 20px; }
+    .data-table thead { background: var(--bg); }
+    .data-table th { text-align: left; padding: 22px 28px; font-weight: 700; color: var(--fg); border-bottom: 1px solid var(--border); }
+    .data-table td { padding: 20px 28px; border-bottom: 1px solid var(--border); color: var(--muted); }
+    .data-table tbody tr:last-child td { border-bottom: 0; }
+    .data-table .cell-strong { color: var(--fg); font-weight: 700; }
+    .s-green .data-table, .s-dark .data-table { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); }
+    .s-green .data-table th, .s-dark .data-table th { color: #fff; border-color: rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); }
+    .s-green .data-table td, .s-dark .data-table td { color: rgba(255,255,255,0.78); border-color: rgba(255,255,255,0.12); }
+
+    /* Image slides */
+    .image-slide { padding: 0; }
+    .image-slide .brand-mark { left: 72px; top: 56px; z-index: 10; }
+    .image-bleed { position: absolute; inset: 0; }
+    .image-bleed img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .image-bleed .placeholder { height: 100%; }
+    .image-caption { position: absolute; left: 72px; bottom: 72px; max-width: 680px; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); padding: 40px; border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+    .image-caption .kicker { margin-bottom: 12px; }
+    .image-caption .h2 { margin-bottom: 8px; }
+    .image-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+
+    /* Timeline */
+    .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; }
+    .timeline::before {
+      content: "";
+      position: absolute; top: 28px; left: 0; right: 0; height: 2px;
+      background: var(--border);
+    }
+    .timeline-step { position: relative; padding-top: 56px; }
+    .step-number {
+      position: absolute; top: 0; left: 0;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--accent); color: #fff;
+      display: grid; place-items: center;
+      font-family: var(--font-display); font-weight: 700; font-size: 20px;
+    }
+    .timeline-step h3 { margin-bottom: 12px; }
+
+    /* Code / terminal */
+    .code-window { background: var(--dark); border-radius: 24px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.14); }
+    .code-header { display: flex; align-items: center; gap: 10px; padding: 18px 24px; background: rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .code-dot { width: 12px; height: 12px; border-radius: 50%; }
+    .code-filename { margin-left: 12px; font-family: var(--font-mono); font-size: 13px; color: rgba(255,255,255,0.5); }
+    .code-block { padding: 32px; margin: 0; font-family: var(--font-mono); font-size: 18px; line-height: 1.65; color: rgba(255,255,255,0.88); overflow-x: auto; white-space: pre-wrap; }
+    .code-block code { font-family: inherit; }
+
+    /* Footer */
+    .slide-footer { position: absolute; bottom: 56px; left: 120px; right: 120px; display: flex; justify-content: space-between; align-items: flex-end; }
+
+    /* Animations */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes scaleIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
+    @keyframes growUp { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+
+    .slide .a-fade { opacity: 0; }
+    .slide .a-rise { opacity: 0; }
+    .slide .a-scale { opacity: 0; }
+    .slide .a-bar { transform: scaleY(0); transform-origin: bottom; }
+
+    .slide.active .a-fade { animation: fadeIn 0.7s cubic-bezier(0.22,1,0.36,1) forwards; }
+    .slide.active .a-rise { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards; }
+    .slide.active .a-scale { animation: scaleIn 0.7s cubic-bezier(0.22,1,0.36,1) forwards; }
+    .slide.active .a-bar { animation: growUp 0.9s cubic-bezier(0.22,1,0.36,1) forwards; }
+
+    .slide.active .delay-1 { animation-delay: 0.08s; }
+    .slide.active .delay-2 { animation-delay: 0.18s; }
+    .slide.active .delay-3 { animation-delay: 0.28s; }
+    .slide.active .delay-4 { animation-delay: 0.38s; }
+    .slide.active .delay-5 { animation-delay: 0.48s; }
+    .slide.active .delay-6 { animation-delay: 0.58s; }
+
+    /* Cover helper */
+    .cover-content { display: flex; flex-direction: column; justify-content: center; height: 100%; max-width: 1100px; }
+    .cover-year { font-family: var(--font-mono); font-size: 16px; color: var(--muted); margin-top: 56px; letter-spacing: 0.08em; }
+
+    /* Big stat helper */
+    .stat-content { display: flex; flex-direction: column; justify-content: center; height: 100%; }
+
+    /* Closing helper */
+    .closing { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; text-align: center; }
+    .closing .brand-mark { position: static; height: 64px; margin-bottom: 48px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .slide.active .a-fade, .slide.active .a-rise, .slide.active .a-scale, .slide.active .a-bar { animation: none; opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck-shell">
+    <div class="deck-stage" id="deck-stage">
+
+      <!-- SKILL SLOT 01: Portada — fondo blanco, título grande -->
+      <section class="slide s-white active" data-screen-label="01 Portada">
+        <div class="frame grid-bg-light">
+          <img class="brand-mark left" src="brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+          <div class="cover-content">
+            <p class="kicker a-rise delay-1"><!-- Kicker --></p>
+            <h1 class="display a-rise delay-2"><!-- Título principal --></h1>
+            <p class="body-lg a-fade delay-3" style="margin-top:32px;"><!-- Subtítulo --></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILL SLOT 02: Contenido — dos columnas -->
+      <section class="slide s-white" data-screen-label="02 Contenido">
+        <div class="frame">
+          <img class="brand-mark right" src="brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+          <div class="col-2-wide" style="height:100%;">
+            <div>
+              <p class="kicker a-rise"><!-- Kicker --></p>
+              <h2 class="h1 a-rise delay-1"><!-- Título --></h2>
+              <p class="body a-fade delay-3"><!-- Cuerpo --></p>
+            </div>
+            <div class="media-frame a-scale delay-3" style="height:560px;">
+              <div class="placeholder">Imagen o video</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILL SLOT 03: Datos — barras -->
+      <section class="slide s-white" data-screen-label="03 Datos">
+        <div class="frame">
+          <img class="brand-mark right" src="brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+          <p class="kicker a-rise"><!-- Kicker --></p>
+          <h2 class="h1 a-rise delay-1"><!-- Título del dato --></h2>
+          <p class="body a-fade delay-2" style="margin-top:16px;"><!-- Contexto --></p>
+          <div class="chart a-rise delay-3" style="margin-top:40px;">
+            <div class="bar-col"><div class="bar-value"><!-- valor --></div><div class="bar a-bar delay-1" style="height:120px;"></div><div class="bar-label"><!-- A --></div></div>
+            <div class="bar-col"><div class="bar-value"><!-- valor --></div><div class="bar a-bar delay-2" style="height:220px;"></div><div class="bar-label"><!-- B --></div></div>
+            <div class="bar-col"><div class="bar-value"><!-- valor --></div><div class="bar a-bar delay-3" style="height:280px;"></div><div class="bar-label"><!-- C --></div></div>
+            <div class="bar-col"><div class="bar-value"><!-- valor --></div><div class="bar a-bar delay-4" style="height:340px;"></div><div class="bar-label"><!-- D --></div></div>
+          </div>
+          <div class="slide-footer a-fade delay-5">
+            <span class="caption"><!-- Fuente --></span>
+            <span class="caption">03</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILL SLOT 04: Destacado verde -->
+      <section class="slide s-green grid-bg" data-screen-label="04 Destacado">
+        <div class="frame" style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+          <img class="brand-mark right" src="brand/logo-lockup-white.svg" alt="Golgotha Academy" />
+          <p class="kicker a-rise"><!-- Kicker --></p>
+          <h2 class="display display-sm a-rise delay-1" style="max-width:14ch;"><!-- Frase de impacto --></h2>
+          <p class="body-lg a-fade delay-3" style="margin-top:40px; color:rgba(255,255,255,0.82); max-width:36ch;"><!-- Contexto --></p>
+        </div>
+      </section>
+
+      <!-- SKILL SLOT 05: Cierre -->
+      <section class="slide s-white" data-screen-label="05 Cierre">
+        <div class="frame closing">
+          <img class="brand-mark" src="brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+          <p class="kicker a-rise delay-1"><!-- Kicker --></p>
+          <h2 class="display display-sm a-rise delay-2"><!-- Mensaje final --></h2>
+          <p class="body-lg a-fade delay-4" style="margin-top:40px; text-align:center;"><!-- CTA --></p>
+        </div>
+      </section>
+
+      <!-- SKILL: duplicar y adaptar los slots anteriores para más slides.
+           La primera diapositiva debe marcarse como slide + active;
+           las demas solo como slide.
+           Ver references/layouts.md para más patrones:
+             09 Gráfico de líneas, 10 Gráfico de donut,
+             11 Tabla de datos, 12 Imagen a pantalla completa,
+             13 Galería de imágenes, 14 Línea de tiempo, 15 Bloque de código. -->
+
+    </div>
+  </div>
+
+  <nav class="deck-counter" role="navigation" aria-label="Deck navigation">
+    <button type="button" id="deck-prev" aria-label="Previous slide">‹</button>
+    <span class="deck-count"><span id="deck-cur">01</span> <span class="total">/ <span id="deck-total">01</span></span></span>
+    <button type="button" id="deck-next" aria-label="Next slide">›</button>
+  </nav>
+  <div class="deck-hint">← / → · space</div>
+
+  <script>
+    (function () {
+      var stage = document.getElementById('deck-stage');
+      var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+      var prev = document.getElementById('deck-prev');
+      var next = document.getElementById('deck-next');
+      var cur = document.getElementById('deck-cur');
+      var total = document.getElementById('deck-total');
+      var STORE = 'deck:idx:' + (location.pathname || '/');
+      var idx = 0;
+      function fit() {
+        var sw = window.innerWidth;
+        var sh = window.innerHeight;
+        var pad = 32;
+        var s = Math.min((sw - pad) / 1920, (sh - pad) / 1080);
+        if (!isFinite(s) || s <= 0) s = 1;
+        var tx = (sw - 1920 * s) / 2;
+        var ty = (sh - 1080 * s) / 2;
+        stage.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + s + ')';
+      }
+      function pad2(n) { return (n < 10 ? '0' : '') + n; }
+      function paint() {
+        slides.forEach(function (el, i) { el.classList.toggle('active', i === idx); });
+        if (cur) cur.textContent = pad2(idx + 1);
+        if (total) total.textContent = pad2(slides.length);
+        if (prev) prev.toggleAttribute('disabled', idx <= 0);
+        if (next) next.toggleAttribute('disabled', idx >= slides.length - 1);
+      }
+      function go(i) {
+        idx = Math.max(0, Math.min(slides.length - 1, i));
+        paint();
+        try { localStorage.setItem(STORE, String(idx)); } catch (_) {}
+      }
+      function onKey(e) {
+        var t = e.target;
+        if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); go(idx + 1); }
+        else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(idx - 1); }
+        else if (e.key === 'Home') { e.preventDefault(); go(0); }
+        else if (e.key === 'End') { e.preventDefault(); go(slides.length - 1); }
+      }
+      window.addEventListener('keydown', onKey, true);
+      document.addEventListener('keydown', onKey, true);
+      if (prev) prev.addEventListener('click', function () { go(idx - 1); });
+      if (next) next.addEventListener('click', function () { go(idx + 1); });
+      document.body.setAttribute('tabindex', '-1');
+      document.body.style.outline = 'none';
+      function focusDeck() { try { window.focus(); document.body.focus({ preventScroll: true }); } catch (_) {} }
+      document.addEventListener('mousedown', focusDeck);
+      window.addEventListener('load', focusDeck);
+      try {
+        var saved = parseInt(localStorage.getItem(STORE) || '0', 10);
+        if (!isNaN(saved) && saved >= 0 && saved < slides.length) idx = saved;
+      } catch (_) {}
+      window.addEventListener('resize', fit);
+      fit();
+      paint();
+      focusDeck();
+    })();
+  </script>
+</body>
+</html>

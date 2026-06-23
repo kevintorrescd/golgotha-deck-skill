@@ -1,0 +1,17 @@
+{
+  "input": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\outputs\\la-entrevista-simulacion-golgotha-v3.pptx",
+  "format": "pptx",
+  "generatedAt": "2026-06-23T23:07:13.686Z",
+  "status": "passed",
+  "stats": {
+    "slides": 8,
+    "positionedObjects": 116
+  },
+  "findings": [],
+  "artifacts": {
+    "inspect": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\outputs\\qa\\la-entrevista-v3\\inspect.ndjson",
+    "montage": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\outputs\\qa\\la-entrevista-v3\\montage.webp",
+    "slidePreviews": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\outputs\\qa\\la-entrevista-v3\\slides",
+    "report": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\outputs\\qa\\la-entrevista-v3\\report.json"
+  }
+}

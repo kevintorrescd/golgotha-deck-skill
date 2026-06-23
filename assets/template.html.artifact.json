@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "kind": "deck",
+  "title": "Golgotha Academy visual reference template",
+  "entry": "template.html",
+  "renderer": "deck-html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "pptx",
+    "zip"
+  ],
+  "createdAt": "2026-06-19T03:31:22.593Z",
+  "updatedAt": "2026-06-19T03:31:22.593Z",
+  "metadata": {
+    "inferred": true,
+    "reconciled": true
+  }
+}

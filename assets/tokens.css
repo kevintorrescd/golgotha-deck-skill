@@ -1,0 +1,14 @@
+:root {
+  --ga-bg: #F8FAFC;
+  --ga-surface: #FFFFFF;
+  --ga-fg: #111111;
+  --ga-muted: #4B5563;
+  --ga-neutral: #F3F4F6;
+  --ga-border: #E5E7EB;
+  --ga-accent: #00D47E;
+  --ga-accent-deep: #059669;
+  --ga-accent-soft: #ECFDF5;
+  --ga-dark: #111111;
+  --ga-dark-soft: #242424;
+  --ga-danger: #FF4444;
+}

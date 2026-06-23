@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejemplo educativo sintético — Golgotha Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg: #F8FAFC; --fg: #111111; --muted: #4B5563; --border: #E5E7EB; --accent: #00D47E; --green: #059669; --dark: #111111; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #111; font-family: Montserrat, system-ui, sans-serif; color: var(--fg); }
+    .deck { display: grid; gap: 24px; padding: 24px; }
+    .slide { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background: var(--bg); padding: 72px 88px 88px; }
+    .green { background: linear-gradient(135deg, var(--green), var(--accent)); color: #fff; }
+    .dark { background: var(--dark); color: #fff; }
+    .logo { position: absolute; top: 40px; right: 56px; height: 34px; }
+    .kicker { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+    .green .kicker, .dark .kicker { color: rgba(255,255,255,.75); }
+    h1 { font-size: 76px; line-height: 1.04; letter-spacing: -.03em; max-width: 12ch; margin: 34px 0 0; }
+    h2 { font-size: 48px; line-height: 1.08; letter-spacing: -.02em; margin: 18px 0; max-width: 15ch; }
+    h3 { font-size: 24px; margin: 0 0 10px; }
+    p { font-size: 22px; line-height: 1.5; color: var(--muted); max-width: 58ch; }
+    .green p, .dark p { color: rgba(255,255,255,.78); }
+    .two { display: grid; grid-template-columns: 1.05fr .95fr; gap: 64px; align-items: center; height: 100%; }
+    .panel { border: 1px solid var(--border); border-radius: 24px; padding: 30px; background: #fff; box-shadow: 0 20px 48px rgba(0,0,0,.07); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 44px; }
+    .card { border: 1px solid var(--border); border-radius: 28px; padding: 28px; background: #fff; min-height: 210px; box-shadow: 0 18px 52px rgba(0,0,0,.06); }
+    .stat { font-size: 132px; line-height: 1; font-weight: 800; color: var(--accent); letter-spacing: -.04em; margin: 28px 0 12px; }
+    .note { position: absolute; left: 88px; bottom: 40px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-label="Ejemplo educativo sintético">
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+      <div class="kicker">Ejemplo sintético</div>
+      <h1>Fundamentos de interpretación bíblica</h1>
+      <p>Secuencia de clase creada para mostrar el sistema visual; no representa contenido curricular real.</p>
+      <div class="note">Referencia visual, no formato obligatorio</div>
+    </section>
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+      <div class="two">
+        <div>
+          <div class="kicker">Objetivo</div>
+          <h2>Leer el texto antes de explicar el texto</h2>
+          <p>La clase introduce una práctica simple: observar, preguntar y aplicar sin saltar directamente a conclusiones.</p>
+        </div>
+        <div class="panel"><h3>Práctica guiada</h3><p>Los estudiantes comparan contexto, audiencia y género literario antes de redactar una síntesis.</p></div>
+      </div>
+    </section>
+    <section class="slide green">
+      <img class="logo" src="../assets/brand/logo-lockup-white.svg" alt="Golgotha Academy" />
+      <div class="kicker">Síntesis</div>
+      <h1>La interpretación empieza con atención</h1>
+      <p>La claridad no nace de decir más, sino de mirar mejor lo que el texto ya presenta.</p>
+    </section>
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+      <div class="kicker">Proceso</div>
+      <h2>Cuatro pasos sostienen la práctica</h2>
+      <div class="cards">
+        <div class="card"><h3>Observar</h3><p>Identificar repeticiones, contrastes y estructura.</p></div>
+        <div class="card"><h3>Preguntar</h3><p>Separar dudas reales de suposiciones rápidas.</p></div>
+        <div class="card"><h3>Aplicar</h3><p>Conectar la lectura con una respuesta concreta.</p></div>
+      </div>
+    </section>
+    <section class="slide dark">
+      <img class="logo" src="../assets/brand/logo-lockup-white.svg" alt="Golgotha Academy" />
+      <div class="kicker">Cierre</div>
+      <h1>Leer bien es una forma de servir mejor</h1>
+      <p>Próximo paso: preparar una observación breve del pasaje asignado.</p>
+    </section>
+  </main>
+</body>
+</html>

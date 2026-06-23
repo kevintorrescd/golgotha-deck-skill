@@ -1,0 +1,21 @@
+{
+  "input": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\outputs\\la-entrevista-simulacion-golgotha-v3.pptx",
+  "format": "pptx",
+  "generatedAt": "2026-06-23T23:14:48.377Z",
+  "status": "passed",
+  "stats": {
+    "slides": 8,
+    "positionedObjects": 116
+  },
+  "findings": [
+    {
+      "severity": "info",
+      "code": "render-not-requested",
+      "message": "Automatic layout checks ran without preview rendering. Use --render or inspect exported slide images before delivery."
+    }
+  ],
+  "artifacts": {
+    "inspect": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\outputs\\qa\\la-entrevista-v3-final\\inspect.ndjson",
+    "report": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\outputs\\qa\\la-entrevista-v3-final\\report.json"
+  }
+}

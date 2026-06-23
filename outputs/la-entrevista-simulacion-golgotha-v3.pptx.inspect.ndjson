@@ -1,0 +1,135 @@
+{"kind":"deck","id":"pr/lbjqnl","name":"Deck"}
+{"kind":"layout","layoutId":"01146d3d-570d-43f7-a71d-b44f9fd51155","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"f6f91788-243e-4c32-a27b-86c9a4cf22c4","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/0bbv8e","slide":1,"title":"SIMULACIÓN DE ENTREVISTA GRUPAL","textShapes":3}
+{"kind":"textbox","id":"sh/rmhk3q5o","slide":1,"text":"SIMULACIÓN DE ENTREVISTA GRUPAL","textPreview":"SIMULACIÓN DE ENTREVISTA GRUPAL","textChars":31,"textLines":1,"bbox":[220,276,840,44]}
+{"kind":"textbox","id":"sh/gfmlkjm1","slide":1,"text":"Responder como equipo docente","textPreview":"Responder como equipo docente","textChars":29,"textLines":1,"bbox":[210,342,860,130]}
+{"kind":"textbox","id":"sh/90je9cvi","slide":1,"text":"Lectura crítica, convivencia, inclusión y seguimiento institucional.","textPreview":"Lectura crítica, convivencia, inclusión y seguimiento institucional.","textChars":68,"textLines":1,"bbox":[288,504,704,42]}
+{"kind":"image","id":"im/oj2t83it","slide":1,"name":"","alt":"Fondo del sistema visual Golgotha","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/vy90je9c","slide":1,"name":"","alt":"Golgotha Academy","bbox":[516,142,248,44]}
+{"kind":"notes","id":"nt/0bbv8e","slide":1,"text":""}
+{"kind":"slide","id":"sl/7klrhj","slide":2,"title":"CONTEXTO DE LA PRUEBA","textShapes":13}
+{"kind":"textbox","id":"sh/ed8bat47","slide":2,"text":"CONTEXTO DE LA PRUEBA","textPreview":"CONTEXTO DE LA PRUEBA","textChars":21,"textLines":1,"bbox":[76,136,430,30]}
+{"kind":"textbox","id":"sh/lc7u54zi","slide":2,"text":"El evaluador observa cómo participa el equipo","textPreview":"El evaluador observa cómo participa el equipo","textChars":45,"textLines":1,"bbox":[76,184,610,142]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":2,"text":"La respuesta no se mide solo por lo que se dice, sino por escucha, turnos, fundamento pedagógico, seguimiento e integración institucional.","textPreview":"La respuesta no se mide solo por lo que se dice, sino por escucha, turnos, fundamento pedagógico, seguimiento e integración institucional.","textChars":138,"textLines":1,"bbox":[78,350,574,110]}
+{"kind":"shape","id":"sh/36hcrmhk","slide":2,"bbox":[736,152,392,76]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":2,"text":"Lectura","textPreview":"Lectura","textChars":7,"textLines":1,"bbox":[764,168,190,30]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":2,"text":"3-5 min","textPreview":"3-5 min","textChars":7,"textLines":1,"bbox":[984,168,116,34]}
+{"kind":"shape","id":"sh/wval87ed","slide":2,"bbox":[736,256,392,76]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":2,"text":"Discusión","textPreview":"Discusión","textChars":9,"textLines":1,"bbox":[764,272,190,30]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":2,"text":"5-7 min","textPreview":"5-7 min","textChars":7,"textLines":1,"bbox":[984,272,116,34]}
+{"kind":"shape","id":"sh/onyd0z61","slide":2,"bbox":[736,360,392,76]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":2,"text":"Exposición","textPreview":"Exposición","textChars":10,"textLines":1,"bbox":[764,376,190,30]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":2,"text":"2-3 min","textPreview":"2-3 min","textChars":7,"textLines":1,"bbox":[984,376,116,34]}
+{"kind":"shape","id":"sh/vahoza1g","slide":2,"bbox":[736,464,392,76]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":2,"text":"Preguntas","textPreview":"Preguntas","textChars":9,"textLines":1,"bbox":[764,480,190,30]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":2,"text":"5-10 min","textPreview":"5-10 min","textChars":8,"textLines":1,"bbox":[984,480,116,34]}
+{"kind":"textbox","id":"sh/61032lsz","slide":2,"text":"Fuente: documento entregado","textPreview":"Fuente: documento entregado","textChars":27,"textLines":1,"bbox":[76,662,520,24]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1162,662,42,24]}
+{"kind":"image","id":"im/x4nap4r6","slide":2,"name":"","alt":"Fondo del sistema visual Golgotha","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/qd4vmtwr","slide":2,"name":"","alt":"Golgotha Academy","bbox":[76,54,218,34]}
+{"kind":"notes","id":"nt/7klrhj","slide":2,"text":""}
+{"kind":"slide","id":"sl/ltxp7s","slide":3,"title":"CASO","textShapes":10}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":3,"text":"CASO","textPreview":"CASO","textChars":4,"textLines":1,"bbox":[76,134,430,30]}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":3,"text":"El grupo necesita una intervención pedagógica, no solo más talleres","textPreview":"El grupo necesita una intervención pedagógica, no solo más talleres","textChars":67,"textLines":1,"bbox":[76,184,702,150]}
+{"kind":"textbox","id":"sh/4r65wjud","slide":3,"text":"La dificultad central combina comprensión inferencial, baja participación, ausentismo y convivencia.","textPreview":"La dificultad central combina comprensión inferencial, baja participación, ausentismo y convivencia.","textChars":100,"textLines":1,"bbox":[78,360,650,76]}
+{"kind":"shape","id":"sh/f6dcbulw","slide":3,"bbox":[838,156,294,304]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":3,"text":"62%","textPreview":"62%","textChars":3,"textLines":1,"bbox":[874,206,222,94]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":3,"text":"no logra justificar respuestas con evidencia del texto","textPreview":"no logra justificar respuestas con evidencia del texto","textChars":54,"textLines":1,"bbox":[872,316,226,84]}
+{"kind":"shape","id":"sh/4fu18jqh","slide":3,"bbox":[78,510,182,44]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":3,"text":"38 estudiantes","textPreview":"38 estudiantes","textChars":14,"textLines":1,"bbox":[96,517,146,36]}
+{"kind":"shape","id":"sh/vy90je9c","slide":3,"bbox":[282,510,284,44]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":3,"text":"4 con ausentismo recurrente","textPreview":"4 con ausentismo recurrente","textChars":27,"textLines":1,"bbox":[300,517,248,36]}
+{"kind":"shape","id":"sh/d4vmtwra","slide":3,"bbox":[588,510,304,44]}
+{"kind":"textbox","id":"sh/61032lsz","slide":3,"text":"2 con dificultades de atención","textPreview":"2 con dificultades de atención","textChars":30,"textLines":1,"bbox":[606,517,268,36]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":3,"text":"Fuente: documento entregado","textPreview":"Fuente: documento entregado","textChars":27,"textLines":1,"bbox":[76,662,520,24]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1162,662,42,24]}
+{"kind":"image","id":"im/1032lszq","slide":3,"name":"","alt":"Fondo del sistema visual Golgotha","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/u9knih4b","slide":3,"name":"","alt":"Golgotha Academy","bbox":[76,54,218,34]}
+{"kind":"notes","id":"nt/ltxp7s","slide":3,"text":""}
+{"kind":"slide","id":"sl/n30uvh","slide":4,"title":"DIAGNÓSTICO","textShapes":10}
+{"kind":"textbox","id":"sh/vixczed8","slide":4,"text":"DIAGNÓSTICO","textPreview":"DIAGNÓSTICO","textChars":11,"textLines":1,"bbox":[76,126,430,30]}
+{"kind":"textbox","id":"sh/2x4nap4r","slide":4,"text":"El caso exige mirar tres capas al mismo tiempo","textPreview":"El caso exige mirar tres capas al mismo tiempo","textChars":46,"textLines":1,"bbox":[76,174,782,118]}
+{"kind":"shape","id":"sh/dcbulwva","slide":4,"bbox":[76,352,338,188]}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":4,"text":"Lectura crítica","textPreview":"Lectura crítica","textChars":15,"textLines":1,"bbox":[104,386,280,40]}
+{"kind":"textbox","id":"sh/val87ed8","slide":4,"text":"Modelar inferencias: pregunta, evidencia textual y justificación.","textPreview":"Modelar inferencias: pregunta, evidencia textual y justificación.","textChars":65,"textLines":1,"bbox":[104,444,280,72]}
+{"kind":"shape","id":"sh/6psfil0r","slide":4,"bbox":[464,352,338,188]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":4,"text":"Convivencia","textPreview":"Convivencia","textChars":11,"textLines":1,"bbox":[492,386,280,40]}
+{"kind":"textbox","id":"sh/knih4byh","slide":4,"text":"Regular turnos, acuerdos de aula y roles cooperativos.","textPreview":"Regular turnos, acuerdos de aula y roles cooperativos.","textChars":54,"textLines":1,"bbox":[492,444,280,72]}
+{"kind":"shape","id":"sh/uxc3ylc7","slide":4,"bbox":[852,352,338,188]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":4,"text":"Inclusión","textPreview":"Inclusión","textChars":9,"textLines":1,"bbox":[880,386,280,40]}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":4,"text":"Ajustar apoyos para ausentismo, atención y acompañamiento familiar realista.","textPreview":"Ajustar apoyos para ausentismo, atención y acompañamiento familiar realista.","textChars":76,"textLines":1,"bbox":[880,444,280,72]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":4,"text":"Fuente: documento entregado","textPreview":"Fuente: documento entregado","textChars":27,"textLines":1,"bbox":[76,662,520,24]}
+{"kind":"textbox","id":"sh/ulwval87","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1162,662,42,24]}
+{"kind":"image","id":"im/p4r65wju","slide":4,"name":"","alt":"Golgotha Academy","bbox":[76,54,218,34]}
+{"kind":"notes","id":"nt/n30uvh","slide":4,"text":""}
+{"kind":"slide","id":"sl/rfwuu1","slide":5,"title":"RUTA DE INTERVENCIÓN","textShapes":16}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":5,"text":"RUTA DE INTERVENCIÓN","textPreview":"RUTA DE INTERVENCIÓN","textChars":20,"textLines":1,"bbox":[76,116,430,30]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":5,"text":"Una buena respuesta muestra proceso, no una solución aislada","textPreview":"Una buena respuesta muestra proceso, no una solución aislada","textChars":60,"textLines":1,"bbox":[76,164,860,108]}
+{"kind":"shape","id":"sh/0nuxc3yl","slide":5,"bbox":[76,322,44,44]}
+{"kind":"textbox","id":"sh/72x4nap4","slide":5,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[76,332,44,22]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":5,"text":"Diagnosticar","textPreview":"Diagnosticar","textChars":12,"textLines":1,"bbox":[142,320,430,32]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":5,"text":"Revisar evidencias de lectura, participación y barreras de acceso.","textPreview":"Revisar evidencias de lectura, participación y barreras de acceso.","textChars":66,"textLines":1,"bbox":[142,358,430,56]}
+{"kind":"shape","id":"sh/wjudg7ad","slide":5,"bbox":[670,322,44,44]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":5,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[670,332,44,22]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":5,"text":"Enseñar estrategias","textPreview":"Enseñar estrategias","textChars":19,"textLines":1,"bbox":[736,320,430,32]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":5,"text":"Practicar inferencias con evidencia textual y retroalimentación.","textPreview":"Practicar inferencias con evidencia textual y retroalimentación.","textChars":64,"textLines":1,"bbox":[736,358,430,56]}
+{"kind":"shape","id":"sh/dg7adsji","slide":5,"bbox":[76,480,44,44]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":5,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[76,490,44,22]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":5,"text":"Cuidar convivencia","textPreview":"Cuidar convivencia","textChars":18,"textLines":1,"bbox":[142,478,430,32]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":5,"text":"Usar roles, acuerdos y rutas institucionales sin culpar al grupo.","textPreview":"Usar roles, acuerdos y rutas institucionales sin culpar al grupo.","textChars":65,"textLines":1,"bbox":[142,516,430,56]}
+{"kind":"shape","id":"sh/d8v6psfi","slide":5,"bbox":[670,480,44,44]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":5,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[670,490,44,22]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":5,"text":"Evaluar y ajustar","textPreview":"Evaluar y ajustar","textChars":17,"textLines":1,"bbox":[736,478,430,32]}
+{"kind":"textbox","id":"sh/rmhk3q5o","slide":5,"text":"Medir avances, abrir oportunidades de mejora y documentar seguimiento.","textPreview":"Medir avances, abrir oportunidades de mejora y documentar seguimiento.","textChars":70,"textLines":1,"bbox":[736,516,430,56]}
+{"kind":"textbox","id":"sh/y1kre1w7","slide":5,"text":"Fuente: documento entregado","textPreview":"Fuente: documento entregado","textChars":27,"textLines":1,"bbox":[76,662,520,24]}
+{"kind":"textbox","id":"sh/9s36hcrm","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1162,662,42,24]}
+{"kind":"image","id":"im/lkjm1cfa","slide":5,"name":"","alt":"Fondo del sistema visual Golgotha","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/at47y1kr","slide":5,"name":"","alt":"Golgotha Academy","bbox":[76,54,218,34]}
+{"kind":"notes","id":"nt/rfwuu1","slide":5,"text":""}
+{"kind":"slide","id":"sl/n978vc","slide":6,"title":"EXPOSICIÓN GRUPAL","textShapes":14}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":6,"text":"EXPOSICIÓN GRUPAL","textPreview":"EXPOSICIÓN GRUPAL","textChars":17,"textLines":1,"bbox":[76,112,430,30]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":6,"text":"Cinco docentes, cinco aportes sin repetir","textPreview":"Cinco docentes, cinco aportes sin repetir","textChars":41,"textLines":1,"bbox":[76,160,850,74]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":6,"bbox":[76,306,322,112]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":6,"text":"Docente 1","textPreview":"Docente 1","textChars":9,"textLines":1,"bbox":[100,330,274,30]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":6,"text":"Problema y barreras","textPreview":"Problema y barreras","textChars":19,"textLines":1,"bbox":[100,368,274,30]}
+{"kind":"shape","id":"sh/s36hcrmh","slide":6,"bbox":[458,306,322,112]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":6,"text":"Docente 2","textPreview":"Docente 2","textChars":9,"textLines":1,"bbox":[482,330,274,30]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":6,"text":"Estrategias de lectura","textPreview":"Estrategias de lectura","textChars":22,"textLines":1,"bbox":[482,368,274,30]}
+{"kind":"shape","id":"sh/gn29gr2p","slide":6,"bbox":[840,306,322,112]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":6,"text":"Docente 3","textPreview":"Docente 3","textChars":9,"textLines":1,"bbox":[864,330,274,30]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":6,"text":"Convivencia","textPreview":"Convivencia","textChars":11,"textLines":1,"bbox":[864,368,274,30]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":6,"bbox":[210,458,398,112]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":6,"text":"Docente 4","textPreview":"Docente 4","textChars":9,"textLines":1,"bbox":[234,482,350,30]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":6,"text":"Inclusión","textPreview":"Inclusión","textChars":9,"textLines":1,"bbox":[234,520,350,30]}
+{"kind":"shape","id":"sh/y90je9cv","slide":6,"bbox":[672,458,398,112]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":6,"text":"Docente 5","textPreview":"Docente 5","textChars":9,"textLines":1,"bbox":[696,482,350,30]}
+{"kind":"textbox","id":"sh/cbulwval","slide":6,"text":"Evaluación y familias","textPreview":"Evaluación y familias","textChars":21,"textLines":1,"bbox":[696,520,350,30]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":6,"text":"Fuente: documento entregado","textPreview":"Fuente: documento entregado","textChars":27,"textLines":1,"bbox":[76,662,520,24]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1162,662,42,24]}
+{"kind":"image","id":"im/gn29gr2p","slide":6,"name":"","alt":"Fondo del sistema visual Golgotha","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/n29gr2p8","slide":6,"name":"","alt":"Golgotha Academy","bbox":[76,54,218,34]}
+{"kind":"notes","id":"nt/n978vc","slide":6,"text":""}
+{"kind":"slide","id":"sl/tvyog2","slide":7,"title":"PREGUNTAS DEL EVALUADOR","textShapes":10}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":7,"text":"PREGUNTAS DEL EVALUADOR","textPreview":"PREGUNTAS DEL EVALUADOR","textChars":23,"textLines":1,"bbox":[76,116,430,30]}
+{"kind":"textbox","id":"sh/tcj6tova","slide":7,"text":"Responder con marco: decision, evidencia y norma interna","textPreview":"Responder con marco: decision, evidencia y norma interna","textChars":56,"textLines":1,"bbox":[76,164,880,106]}
+{"kind":"shape","id":"sh/idonyd0z","slide":7,"bbox":[76,334,338,210]}
+{"kind":"textbox","id":"sh/byhgn29g","slide":7,"text":"Si preguntan por evaluación","textPreview":"Si preguntan por evaluación","textChars":27,"textLines":1,"bbox":[102,372,282,58]}
+{"kind":"textbox","id":"sh/0je9cvix","slide":7,"text":"Responder desde el SIEE: formativa, retroalimentada y con oportunidades de mejora.","textPreview":"Responder desde el SIEE: formativa, retroalimentada y con oportunidades de mejora.","textChars":82,"textLines":1,"bbox":[102,450,282,74]}
+{"kind":"shape","id":"sh/t47y1kre","slide":7,"bbox":[464,334,338,210]}
+{"kind":"textbox","id":"sh/i9s36hcr","slide":7,"text":"Si preguntan por disciplina","textPreview":"Si preguntan por disciplina","textChars":27,"textLines":1,"bbox":[490,372,282,58]}
+{"kind":"textbox","id":"sh/bulwval8","slide":7,"text":"Usar acuerdos de aula y rutas del manual, sin reducir el caso a castigo.","textPreview":"Usar acuerdos de aula y rutas del manual, sin reducir el caso a castigo.","textChars":72,"textLines":1,"bbox":[490,450,282,74]}
+{"kind":"shape","id":"sh/j6tovaho","slide":7,"bbox":[852,334,338,210]}
+{"kind":"textbox","id":"sh/ulwval87","slide":7,"text":"Si preguntan por familias","textPreview":"Si preguntan por familias","textChars":25,"textLines":1,"bbox":[878,372,282,58]}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":7,"text":"Proponer comunicación viable y apoyos realistas, sin trasladar toda la carga.","textPreview":"Proponer comunicación viable y apoyos realistas, sin trasladar toda la carga.","textChars":77,"textLines":1,"bbox":[878,450,282,74]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":7,"text":"Fuente: documento entregado","textPreview":"Fuente: documento entregado","textChars":27,"textLines":1,"bbox":[76,662,520,24]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1162,662,42,24]}
+{"kind":"image","id":"im/a9w3m94f","slide":7,"name":"","alt":"Golgotha Academy","bbox":[76,54,218,34]}
+{"kind":"notes","id":"nt/tvyog2","slide":7,"text":""}
+{"kind":"slide","id":"sl/1hxc07","slide":8,"title":"CIERRE PROPUESTO","textShapes":3}
+{"kind":"textbox","id":"sh/3m94fu18","slide":8,"text":"CIERRE PROPUESTO","textPreview":"CIERRE PROPUESTO","textChars":16,"textLines":1,"bbox":[280,238,720,36]}
+{"kind":"textbox","id":"sh/sji5snel","slide":8,"text":"Intervenir con evidencia, acompañar a los estudiantes y medir avances","textPreview":"Intervenir con evidencia, acompañar a los estudiantes y medir avances","textChars":69,"textLines":1,"bbox":[232,304,816,148]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":8,"text":"La salida no es endurecer la evaluación como única respuesta; es articular PEI, SIEE, convivencia e inclusión.","textPreview":"La salida no es endurecer la evaluación como única respuesta; es articular PEI, SIEE, convivencia e inclusión.","textChars":110,"textLines":1,"bbox":[284,498,712,74]}
+{"kind":"image","id":"im/8nqxs72x","slide":8,"name":"","alt":"Fondo del sistema visual Golgotha","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/j2t83itg","slide":8,"name":"","alt":"Golgotha Academy","bbox":[516,124,248,44]}
+{"kind":"notes","id":"nt/1hxc07","slide":8,"text":""}

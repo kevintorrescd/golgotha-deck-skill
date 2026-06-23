@@ -1,0 +1,394 @@
+{
+  "input": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\outputs\\la-entrevista-simulacion-golgotha-v2.pptx",
+  "format": "pptx",
+  "generatedAt": "2026-06-23T23:00:30.123Z",
+  "status": "failed",
+  "stats": {
+    "slides": 8,
+    "positionedObjects": 137
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "possible-text-logo",
+      "message": "Possible text-built logo found; use real logo assets from assets/brand when the format supports images.",
+      "slide": 1,
+      "objectId": "sh/nap4r65w",
+      "text": "GOLGOTHA ACADEMY"
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 1,
+      "objectId": "sh/cvixczed",
+      "bbox": [
+        1126,
+        74,
+        70,
+        4
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 1,
+      "objectId": "sh/5gbq1ory",
+      "bbox": [
+        78,
+        170,
+        96,
+        8
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "possible-text-logo",
+      "message": "Possible text-built logo found; use real logo assets from assets/brand when the format supports images.",
+      "slide": 2,
+      "objectId": "sh/yxobm58z",
+      "text": "GOLGOTHA ACADEMY"
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 2,
+      "objectId": "sh/5o7qpg3e",
+      "bbox": [
+        1126,
+        74,
+        70,
+        4
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 2,
+      "objectId": "sh/9cvixcze",
+      "bbox": [
+        104,
+        308,
+        54,
+        5
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 2,
+      "objectId": "sh/wb2hwfyx",
+      "bbox": [
+        474,
+        308,
+        54,
+        5
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 2,
+      "objectId": "sh/w3m94fu1",
+      "bbox": [
+        844,
+        308,
+        54,
+        5
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 2,
+      "objectId": "sh/szqtcj6t",
+      "bbox": [
+        104,
+        468,
+        54,
+        5
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 2,
+      "objectId": "sh/36hcrmhk",
+      "bbox": [
+        474,
+        468,
+        54,
+        5
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "possible-text-logo",
+      "message": "Possible text-built logo found; use real logo assets from assets/brand when the format supports images.",
+      "slide": 3,
+      "objectId": "sh/vmtwra5g",
+      "text": "GOLGOTHA ACADEMY"
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 3,
+      "objectId": "sh/o7qpg3ex",
+      "bbox": [
+        1126,
+        74,
+        70,
+        4
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "possible-text-logo",
+      "message": "Possible text-built logo found; use real logo assets from assets/brand when the format supports images.",
+      "slide": 4,
+      "objectId": "sh/1gvy90je",
+      "text": "GOLGOTHA ACADEMY"
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 4,
+      "objectId": "sh/qtcj6tov",
+      "bbox": [
+        1126,
+        74,
+        70,
+        4
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 4,
+      "objectId": "sh/xs72x4na",
+      "bbox": [
+        78,
+        420,
+        96,
+        8
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "possible-text-logo",
+      "message": "Possible text-built logo found; use real logo assets from assets/brand when the format supports images.",
+      "slide": 5,
+      "objectId": "sh/vahoza1g",
+      "text": "GOLGOTHA ACADEMY"
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 5,
+      "objectId": "sh/ovahoza1",
+      "bbox": [
+        1126,
+        74,
+        70,
+        4
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "possible-text-logo",
+      "message": "Possible text-built logo found; use real logo assets from assets/brand when the format supports images.",
+      "slide": 6,
+      "objectId": "sh/9cvixcze",
+      "text": "GOLGOTHA ACADEMY"
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 6,
+      "objectId": "sh/ylc7u54z",
+      "bbox": [
+        1126,
+        74,
+        70,
+        4
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 6,
+      "objectId": "sh/yxobm58z",
+      "bbox": [
+        104,
+        278,
+        54,
+        5
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 6,
+      "objectId": "sh/d8v6psfi",
+      "bbox": [
+        474,
+        278,
+        54,
+        5
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 6,
+      "objectId": "sh/dg7adsji",
+      "bbox": [
+        844,
+        278,
+        54,
+        5
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 6,
+      "objectId": "sh/dsji5sne",
+      "bbox": [
+        104,
+        438,
+        54,
+        5
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 6,
+      "objectId": "sh/2hwfyxob",
+      "bbox": [
+        474,
+        438,
+        54,
+        5
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "possible-text-logo",
+      "message": "Possible text-built logo found; use real logo assets from assets/brand when the format supports images.",
+      "slide": 7,
+      "objectId": "sh/qd4vmtwr",
+      "text": "GOLGOTHA ACADEMY"
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 7,
+      "objectId": "sh/x4nap4r6",
+      "bbox": [
+        1126,
+        74,
+        70,
+        4
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 7,
+      "objectId": "sh/xczed8v6",
+      "bbox": [
+        104,
+        296,
+        54,
+        5
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 7,
+      "objectId": "sh/svu9knih",
+      "bbox": [
+        498,
+        296,
+        54,
+        5
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 7,
+      "objectId": "sh/s36hcrmh",
+      "bbox": [
+        892,
+        296,
+        54,
+        5
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "possible-text-logo",
+      "message": "Possible text-built logo found; use real logo assets from assets/brand when the format supports images.",
+      "slide": 8,
+      "objectId": "sh/1032lszq",
+      "text": "GOLGOTHA ACADEMY"
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 8,
+      "objectId": "sh/u9knih4b",
+      "bbox": [
+        1126,
+        74,
+        70,
+        4
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "thin-decorative-line",
+      "message": "Thin line-like shape found; Golgotha decks should use spacing and hierarchy instead of decorative title lines.",
+      "slide": 8,
+      "objectId": "sh/1orytsvu",
+      "bbox": [
+        78,
+        420,
+        96,
+        8
+      ]
+    }
+  ],
+  "artifacts": {
+    "inspect": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\outputs\\qa\\la-entrevista-v2-check\\inspect.ndjson",
+    "montage": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\outputs\\qa\\la-entrevista-v2-check\\montage.webp",
+    "slidePreviews": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\outputs\\qa\\la-entrevista-v2-check\\slides",
+    "report": "C:\\Users\\ASUS\\Documents\\golgotha-deck-skill\\outputs\\qa\\la-entrevista-v2-check\\report.json"
+  }
+}

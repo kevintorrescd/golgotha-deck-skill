@@ -1,0 +1,134 @@
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/2x4nap4r","slide":1,"title":"SIMULACION DE ENTREVISTA GRUPAL","textShapes":3}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":1,"text":"SIMULACION DE ENTREVISTA GRUPAL","textPreview":"SIMULACION DE ENTREVISTA GRUPAL","textChars":31,"textLines":1,"bbox":[220,276,840,44]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":1,"text":"Responder como equipo docente","textPreview":"Responder como equipo docente","textChars":29,"textLines":1,"bbox":[210,342,860,130]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":1,"text":"Lectura critica, convivencia, inclusion y seguimiento institucional.","textPreview":"Lectura critica, convivencia, inclusion y seguimiento institucional.","textChars":68,"textLines":1,"bbox":[288,504,704,42]}
+{"kind":"image","id":"im/twra5gbq","slide":1,"name":"","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/4byhgn29","slide":1,"name":"","bbox":[516,142,248,44]}
+{"kind":"notes","id":"nt/2x4nap4r","slide":1,"text":""}
+{"kind":"slide","id":"sl/pg3ex0nu","slide":2,"title":"CONTEXTO DE LA PRUEBA","textShapes":13}
+{"kind":"textbox","id":"sh/g3ex0nux","slide":2,"text":"CONTEXTO DE LA PRUEBA","textPreview":"CONTEXTO DE LA PRUEBA","textChars":21,"textLines":1,"bbox":[76,136,430,30]}
+{"kind":"textbox","id":"sh/r65wjudg","slide":2,"text":"El evaluador observa como participa el equipo","textPreview":"El evaluador observa como participa el equipo","textChars":45,"textLines":1,"bbox":[76,184,610,142]}
+{"kind":"textbox","id":"sh/ylc7u54z","slide":2,"text":"La respuesta no se mide solo por lo que se dice, sino por escucha, turnos, fundamento pedagogico, seguimiento e integracion institucional.","textPreview":"La respuesta no se mide solo por lo que se dice, sino por escucha, turnos, fundamento pedagogico, seguimiento e integracion institucional.","textChars":138,"textLines":1,"bbox":[78,350,574,110]}
+{"kind":"shape","id":"sh/9cvixcze","slide":2,"bbox":[736,152,392,76]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":2,"text":"Lectura","textPreview":"Lectura","textChars":7,"textLines":1,"bbox":[764,168,190,30]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":2,"text":"3-5 min","textPreview":"3-5 min","textChars":7,"textLines":1,"bbox":[984,168,116,34]}
+{"kind":"shape","id":"sh/yd0z6103","slide":2,"bbox":[736,256,392,76]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":2,"text":"Discusion","textPreview":"Discusion","textChars":9,"textLines":1,"bbox":[764,272,190,30]}
+{"kind":"textbox","id":"sh/lwval87e","slide":2,"text":"5-7 min","textPreview":"5-7 min","textChars":7,"textLines":1,"bbox":[984,272,116,34]}
+{"kind":"shape","id":"sh/e9cvixcz","slide":2,"bbox":[736,360,392,76]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":2,"text":"Exposicion","textPreview":"Exposicion","textChars":10,"textLines":1,"bbox":[764,376,190,30]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":2,"text":"2-3 min","textPreview":"2-3 min","textChars":7,"textLines":1,"bbox":[984,376,116,34]}
+{"kind":"shape","id":"sh/loj2t83i","slide":2,"bbox":[736,464,392,76]}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":2,"text":"Preguntas","textPreview":"Preguntas","textChars":9,"textLines":1,"bbox":[764,480,190,30]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":2,"text":"5-10 min","textPreview":"5-10 min","textChars":8,"textLines":1,"bbox":[984,480,116,34]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":2,"text":"Fuente: documento entregado","textPreview":"Fuente: documento entregado","textChars":27,"textLines":1,"bbox":[76,662,520,24]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1162,662,42,24]}
+{"kind":"image","id":"im/a5gbq1or","slide":2,"name":"","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/3m94fu18","slide":2,"name":"","bbox":[76,54,218,34]}
+{"kind":"notes","id":"nt/pg3ex0nu","slide":2,"text":""}
+{"kind":"slide","id":"sl/s72x4nap","slide":3,"title":"CASO","textShapes":10}
+{"kind":"textbox","id":"sh/dsji5sne","slide":3,"text":"CASO","textPreview":"CASO","textChars":4,"textLines":1,"bbox":[76,134,430,30]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":3,"text":"El grupo necesita una intervencion pedagogica, no solo mas talleres","textPreview":"El grupo necesita una intervencion pedagogica, no solo mas talleres","textChars":67,"textLines":1,"bbox":[76,184,702,150]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":3,"text":"La dificultad central combina comprension inferencial, baja participacion, ausentismo y convivencia.","textPreview":"La dificultad central combina comprension inferencial, baja participacion, ausentismo y convivencia.","textChars":100,"textLines":1,"bbox":[78,360,650,76]}
+{"kind":"shape","id":"sh/oj2t83it","slide":3,"bbox":[838,156,294,304]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":3,"text":"62%","textPreview":"62%","textChars":3,"textLines":1,"bbox":[874,206,222,94]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":3,"text":"no logra justificar respuestas con evidencia del texto","textPreview":"no logra justificar respuestas con evidencia del texto","textChars":54,"textLines":1,"bbox":[872,316,226,84]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":3,"bbox":[78,510,182,44]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":3,"text":"38 estudiantes","textPreview":"38 estudiantes","textChars":14,"textLines":1,"bbox":[96,517,146,36]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":3,"bbox":[282,510,284,44]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":3,"text":"4 con ausentismo recurrente","textPreview":"4 con ausentismo recurrente","textChars":27,"textLines":1,"bbox":[300,517,248,36]}
+{"kind":"shape","id":"sh/oj2t83it","slide":3,"bbox":[588,510,304,44]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":3,"text":"2 con dificultades de atencion","textPreview":"2 con dificultades de atencion","textChars":30,"textLines":1,"bbox":[606,517,268,36]}
+{"kind":"textbox","id":"sh/61032lsz","slide":3,"text":"Fuente: documento entregado","textPreview":"Fuente: documento entregado","textChars":27,"textLines":1,"bbox":[76,662,520,24]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1162,662,42,24]}
+{"kind":"image","id":"im/vahoza1g","slide":3,"name":"","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/o7qpg3ex","slide":3,"name":"","bbox":[76,54,218,34]}
+{"kind":"notes","id":"nt/s72x4nap","slide":3,"text":""}
+{"kind":"slide","id":"sl/val87ed8","slide":4,"title":"DIAGNOSTICO","textShapes":10}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":4,"text":"DIAGNOSTICO","textPreview":"DIAGNOSTICO","textChars":11,"textLines":1,"bbox":[76,126,430,30]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":4,"text":"El caso exige mirar tres capas al mismo tiempo","textPreview":"El caso exige mirar tres capas al mismo tiempo","textChars":46,"textLines":1,"bbox":[76,174,782,118]}
+{"kind":"shape","id":"sh/87ed8bat","slide":4,"bbox":[76,352,338,188]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":4,"text":"Lectura critica","textPreview":"Lectura critica","textChars":15,"textLines":1,"bbox":[104,386,280,40]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":4,"text":"Modelar inferencias: pregunta, evidencia textual y justificacion.","textPreview":"Modelar inferencias: pregunta, evidencia textual y justificacion.","textChars":65,"textLines":1,"bbox":[104,444,280,72]}
+{"kind":"shape","id":"sh/fmlkjm1c","slide":4,"bbox":[464,352,338,188]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":4,"text":"Convivencia","textPreview":"Convivencia","textChars":11,"textLines":1,"bbox":[492,386,280,40]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":4,"text":"Regular turnos, acuerdos de aula y roles cooperativos.","textPreview":"Regular turnos, acuerdos de aula y roles cooperativos.","textChars":54,"textLines":1,"bbox":[492,444,280,72]}
+{"kind":"shape","id":"sh/1w7mp0bi","slide":4,"bbox":[852,352,338,188]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":4,"text":"Inclusion","textPreview":"Inclusion","textChars":9,"textLines":1,"bbox":[880,386,280,40]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":4,"text":"Ajustar apoyos para ausentismo, atencion y acompanamiento familiar realista.","textPreview":"Ajustar apoyos para ausentismo, atencion y acompanamiento familiar realista.","textChars":76,"textLines":1,"bbox":[880,444,280,72]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":4,"text":"Fuente: documento entregado","textPreview":"Fuente: documento entregado","textChars":27,"textLines":1,"bbox":[76,662,520,24]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1162,662,42,24]}
+{"kind":"image","id":"im/nuxc3ylc","slide":4,"name":"","bbox":[76,54,218,34]}
+{"kind":"notes","id":"nt/val87ed8","slide":4,"text":""}
+{"kind":"slide","id":"sl/mlkjm1cf","slide":5,"title":"RUTA DE INTERVENCION","textShapes":16}
+{"kind":"textbox","id":"sh/dg7adsji","slide":5,"text":"RUTA DE INTERVENCION","textPreview":"RUTA DE INTERVENCION","textChars":20,"textLines":1,"bbox":[76,116,430,30]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":5,"text":"Una buena respuesta muestra proceso, no una solucion aislada","textPreview":"Una buena respuesta muestra proceso, no una solucion aislada","textChars":60,"textLines":1,"bbox":[76,164,860,108]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":5,"bbox":[76,322,44,44]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":5,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[76,332,44,22]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":5,"text":"Diagnosticar","textPreview":"Diagnosticar","textChars":12,"textLines":1,"bbox":[142,320,430,32]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":5,"text":"Revisar evidencias de lectura, participacion y barreras de acceso.","textPreview":"Revisar evidencias de lectura, participacion y barreras de acceso.","textChars":66,"textLines":1,"bbox":[142,358,430,56]}
+{"kind":"shape","id":"sh/vy90je9c","slide":5,"bbox":[670,322,44,44]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":5,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[670,332,44,22]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":5,"text":"Ensenar estrategias","textPreview":"Ensenar estrategias","textChars":19,"textLines":1,"bbox":[736,320,430,32]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":5,"text":"Practicar inferencias con evidencia textual y retroalimentacion.","textPreview":"Practicar inferencias con evidencia textual y retroalimentacion.","textChars":64,"textLines":1,"bbox":[736,358,430,56]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":5,"bbox":[76,480,44,44]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":5,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[76,490,44,22]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":5,"text":"Cuidar convivencia","textPreview":"Cuidar convivencia","textChars":18,"textLines":1,"bbox":[142,478,430,32]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":5,"text":"Usar roles, acuerdos y rutas institucionales sin culpar al grupo.","textPreview":"Usar roles, acuerdos y rutas institucionales sin culpar al grupo.","textChars":65,"textLines":1,"bbox":[142,516,430,56]}
+{"kind":"shape","id":"sh/gn29gr2p","slide":5,"bbox":[670,480,44,44]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":5,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[670,490,44,22]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":5,"text":"Evaluar y ajustar","textPreview":"Evaluar y ajustar","textChars":17,"textLines":1,"bbox":[736,478,430,32]}
+{"kind":"textbox","id":"sh/2x4nap4r","slide":5,"text":"Medir avances, abrir oportunidades de mejora y documentar seguimiento.","textPreview":"Medir avances, abrir oportunidades de mejora y documentar seguimiento.","textChars":70,"textLines":1,"bbox":[736,516,430,56]}
+{"kind":"textbox","id":"sh/vixczed8","slide":5,"text":"Fuente: documento entregado","textPreview":"Fuente: documento entregado","textChars":27,"textLines":1,"bbox":[76,662,520,24]}
+{"kind":"textbox","id":"sh/k3q5o7qp","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1162,662,42,24]}
+{"kind":"image","id":"im/mhk3q5o7","slide":5,"name":"","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/twra5gbq","slide":5,"name":"","bbox":[76,54,218,34]}
+{"kind":"notes","id":"nt/mlkjm1cf","slide":5,"text":""}
+{"kind":"slide","id":"sl/58z25kb6","slide":6,"title":"EXPOSICION GRUPAL","textShapes":14}
+{"kind":"textbox","id":"sh/r65wjudg","slide":6,"text":"EXPOSICION GRUPAL","textPreview":"EXPOSICION GRUPAL","textChars":17,"textLines":1,"bbox":[76,112,430,30]}
+{"kind":"textbox","id":"sh/g3ex0nux","slide":6,"text":"Cinco docentes, cinco aportes sin repetir","textPreview":"Cinco docentes, cinco aportes sin repetir","textChars":41,"textLines":1,"bbox":[76,160,850,74]}
+{"kind":"shape","id":"sh/5o7qpg3e","slide":6,"bbox":[76,306,322,112]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":6,"text":"Docente 1","textPreview":"Docente 1","textChars":9,"textLines":1,"bbox":[100,330,274,30]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":6,"text":"Problema y barreras","textPreview":"Problema y barreras","textChars":19,"textLines":1,"bbox":[100,368,274,30]}
+{"kind":"shape","id":"sh/g7adsji5","slide":6,"bbox":[458,306,322,112]}
+{"kind":"textbox","id":"sh/9s36hcrm","slide":6,"text":"Docente 2","textPreview":"Docente 2","textChars":9,"textLines":1,"bbox":[482,330,274,30]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":6,"text":"Estrategias de lectura","textPreview":"Estrategias de lectura","textChars":22,"textLines":1,"bbox":[482,368,274,30]}
+{"kind":"shape","id":"sh/onyd0z61","slide":6,"bbox":[840,306,322,112]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":6,"text":"Docente 3","textPreview":"Docente 3","textChars":9,"textLines":1,"bbox":[864,330,274,30]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":6,"text":"Convivencia","textPreview":"Convivencia","textChars":11,"textLines":1,"bbox":[864,368,274,30]}
+{"kind":"shape","id":"sh/dg7adsji","slide":6,"bbox":[76,458,430,112]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":6,"text":"Docente 4","textPreview":"Docente 4","textChars":9,"textLines":1,"bbox":[100,482,382,30]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":6,"text":"Inclusion","textPreview":"Inclusion","textChars":9,"textLines":1,"bbox":[100,520,382,30]}
+{"kind":"shape","id":"sh/6tovahoz","slide":6,"bbox":[458,458,430,112]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":6,"text":"Docente 5","textPreview":"Docente 5","textChars":9,"textLines":1,"bbox":[482,482,382,30]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":6,"text":"Evaluacion y familias","textPreview":"Evaluacion y familias","textChars":21,"textLines":1,"bbox":[482,520,382,30]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":6,"text":"Fuente: documento entregado","textPreview":"Fuente: documento entregado","textChars":27,"textLines":1,"bbox":[76,662,520,24]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1162,662,42,24]}
+{"kind":"image","id":"im/lc7u54zi","slide":6,"name":"","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/wra5gbq1","slide":6,"name":"","bbox":[76,54,218,34]}
+{"kind":"notes","id":"nt/58z25kb6","slide":6,"text":""}
+{"kind":"slide","id":"sl/0z61032l","slide":7,"title":"PREGUNTAS DEL EVALUADOR","textShapes":10}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":7,"text":"PREGUNTAS DEL EVALUADOR","textPreview":"PREGUNTAS DEL EVALUADOR","textChars":23,"textLines":1,"bbox":[76,116,430,30]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":7,"text":"Responder con marco: decision, evidencia y norma interna","textPreview":"Responder con marco: decision, evidencia y norma interna","textChars":56,"textLines":1,"bbox":[76,164,880,106]}
+{"kind":"shape","id":"sh/fa9w3m94","slide":7,"bbox":[76,334,338,210]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":7,"text":"Si preguntan por evaluacion","textPreview":"Si preguntan por evaluacion","textChars":27,"textLines":1,"bbox":[102,372,282,58]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":7,"text":"Responder desde el SIEE: formativa, retroalimentada y con oportunidades de mejora.","textPreview":"Responder desde el SIEE: formativa, retroalimentada y con oportunidades de mejora.","textChars":82,"textLines":1,"bbox":[102,450,282,74]}
+{"kind":"shape","id":"sh/8v6psfil","slide":7,"bbox":[464,334,338,210]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":7,"text":"Si preguntan por disciplina","textPreview":"Si preguntan por disciplina","textChars":27,"textLines":1,"bbox":[490,372,282,58]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":7,"text":"Usar acuerdos de aula y rutas del manual, sin reducir el caso a castigo.","textPreview":"Usar acuerdos de aula y rutas del manual, sin reducir el caso a castigo.","textChars":72,"textLines":1,"bbox":[490,450,282,74]}
+{"kind":"shape","id":"sh/svu9knih","slide":7,"bbox":[852,334,338,210]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":7,"text":"Si preguntan por familias","textPreview":"Si preguntan por familias","textChars":25,"textLines":1,"bbox":[878,372,282,58]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":7,"text":"Proponer comunicacion viable y apoyos realistas, sin trasladar toda la carga.","textPreview":"Proponer comunicacion viable y apoyos realistas, sin trasladar toda la carga.","textChars":77,"textLines":1,"bbox":[878,450,282,74]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":7,"text":"Fuente: documento entregado","textPreview":"Fuente: documento entregado","textChars":27,"textLines":1,"bbox":[76,662,520,24]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1162,662,42,24]}
+{"kind":"image","id":"im/mp0bi9s3","slide":7,"name":"","bbox":[76,54,218,34]}
+{"kind":"notes","id":"nt/0z61032l","slide":7,"text":""}
+{"kind":"slide","id":"sl/fu18jqh0","slide":8,"title":"CIERRE PROPUESTO","textShapes":3}
+{"kind":"textbox","id":"sh/judg7ads","slide":8,"text":"CIERRE PROPUESTO","textPreview":"CIERRE PROPUESTO","textChars":16,"textLines":1,"bbox":[280,238,720,36]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":8,"text":"Intervenir con evidencia, acompanar a los estudiantes y medir avances","textPreview":"Intervenir con evidencia, acompanar a los estudiantes y medir avances","textChars":69,"textLines":1,"bbox":[232,304,816,148]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":8,"text":"La salida no es endurecer la evaluacion como unica respuesta; es articular PEI, SIEE, convivencia e inclusion.","textPreview":"La salida no es endurecer la evaluacion como unica respuesta; es articular PEI, SIEE, convivencia e inclusion.","textChars":110,"textLines":1,"bbox":[284,498,712,74]}
+{"kind":"image","id":"im/nqxs72x4","slide":8,"name":"","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/u54zidon","slide":8,"name":"","bbox":[516,124,248,44]}
+{"kind":"notes","id":"nt/fu18jqh0","slide":8,"text":""}
