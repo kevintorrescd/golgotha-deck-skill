@@ -24,7 +24,7 @@ Catálogo de layouts para presentaciones Golgotha. Cada patrón describe intenci
 ```html
 <section class="slide s-white active" data-screen-label="01 Hero claro">
   <div class="frame grid-bg-light">
-    <img class="brand-mark left" src="brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+    <img class="brand-mark left" src="brand/logo-lockup-light.png" alt="Golgotha Academy" />
     <div class="cover-content">
       <p class="kicker a-rise delay-1">Módulo 01</p>
       <h1 class="display a-rise delay-2">Título principal</h1>
@@ -45,7 +45,7 @@ Catálogo de layouts para presentaciones Golgotha. Cada patrón describe intenci
 ```html
 <section class="slide s-white" data-screen-label="02 Dos columnas">
   <div class="frame">
-    <img class="brand-mark right" src="brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+    <img class="brand-mark right" src="brand/logo-lockup-light.png" alt="Golgotha Academy" />
     <div class="col-2-wide" style="height:100%;">
       <div>
         <p class="kicker a-rise">Concepto</p>
@@ -53,7 +53,7 @@ Catálogo de layouts para presentaciones Golgotha. Cada patrón describe intenci
         <p class="body a-fade delay-3" style="margin-top:32px;">Explicación breve en máximo dos frases.</p>
       </div>
       <div class="media-frame a-scale delay-3" style="height:560px;">
-        <img src="backgrounds/media-placeholder.svg" alt="Espacio para recurso visual" />
+        <img src="backgrounds/media-placeholder.png" alt="Espacio para recurso visual" />
       </div>
     </div>
   </div>
@@ -69,15 +69,15 @@ Catálogo de layouts para presentaciones Golgotha. Cada patrón describe intenci
 **Estructura:** media grande, presentador en bloque redondeado, logo negativo o positivo según fondo.
 
 ```html
-<section class="slide s-green grid-bg" data-screen-label="03 Media y presentador">
+<section class="slide s-green grid-bg-green" data-screen-label="03 Media y presentador">
   <div class="frame">
-    <img class="brand-mark right" src="brand/logo-lockup-white.svg" alt="Golgotha Academy" />
+    <img class="brand-mark right" src="brand/logo-lockup-white.png" alt="Golgotha Academy" />
     <div class="col-2-wide" style="height:100%;">
       <div class="media-frame a-scale" style="height:560px;">
-        <img src="backgrounds/media-placeholder.svg" alt="Espacio para recurso visual" />
+        <img src="backgrounds/media-placeholder.png" alt="Espacio para recurso visual" />
       </div>
       <div class="media-frame a-scale delay-1" style="height:560px;">
-        <img src="backgrounds/presenter-placeholder.svg" alt="Espacio para imagen del presentador" />
+        <img src="backgrounds/presenter-placeholder.png" alt="Espacio para imagen del presentador" />
       </div>
     </div>
   </div>
@@ -93,9 +93,9 @@ Catálogo de layouts para presentaciones Golgotha. Cada patrón describe intenci
 **Estructura:** fondo verde vivo con grilla, logo negativo, frase breve centrada.
 
 ```html
-<section class="slide s-green grid-bg" data-screen-label="04 Hero verde">
+<section class="slide s-green grid-bg-green" data-screen-label="04 Hero verde">
   <div class="frame" style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
-    <img class="brand-mark right" src="brand/logo-lockup-white.svg" alt="Golgotha Academy" />
+    <img class="brand-mark right" src="brand/logo-lockup-white.png" alt="Golgotha Academy" />
     <p class="kicker a-rise">Nueva lección</p>
     <h2 class="display display-sm a-rise delay-1" style="max-width:16ch;">Construimos la próxima generación de aprendizaje</h2>
     <p class="body-lg a-fade delay-3" style="margin-top:40px; color:rgba(255,255,255,0.84); max-width:36ch;">Contexto breve.</p>
@@ -112,9 +112,9 @@ Catálogo de layouts para presentaciones Golgotha. Cada patrón describe intenci
 **Estructura:** fondo oscuro con grilla, logo negativo, texto grande.
 
 ```html
-<section class="slide s-dark grid-bg" data-screen-label="05 Hero oscuro">
+<section class="slide s-dark grid-bg-dark" data-screen-label="05 Hero oscuro">
   <div class="frame" style="display:flex; flex-direction:column; justify-content:center;">
-    <img class="brand-mark right" src="brand/logo-lockup-white.svg" alt="Golgotha Academy" />
+    <img class="brand-mark right" src="brand/logo-lockup-white.png" alt="Golgotha Academy" />
     <p class="kicker a-rise">Pregunta guía</p>
     <h2 class="display display-sm a-rise delay-1" style="max-width:15ch;">La frase central de la sección</h2>
   </div>
@@ -132,7 +132,7 @@ Catálogo de layouts para presentaciones Golgotha. Cada patrón describe intenci
 ```html
 <section class="slide s-white" data-screen-label="06 Dato">
   <div class="frame stat-content">
-    <img class="brand-mark right" src="brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+    <img class="brand-mark right" src="brand/logo-lockup-light.png" alt="Golgotha Academy" />
     <p class="kicker a-rise">Dato clave</p>
     <div class="stat-huge a-scale delay-1">—</div>
     <p class="body-lg a-fade delay-2" style="margin-top:24px;">Contexto del dato.</p>
@@ -152,7 +152,7 @@ Catálogo de layouts para presentaciones Golgotha. Cada patrón describe intenci
 ```html
 <section class="slide s-white" data-screen-label="07 Barras">
   <div class="frame">
-    <img class="brand-mark right" src="brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+    <img class="brand-mark right" src="brand/logo-lockup-light.png" alt="Golgotha Academy" />
     <p class="kicker a-rise">Datos ilustrativos</p>
     <h2 class="h1 a-rise delay-1">La tendencia principal en una frase</h2>
     <p class="body a-fade delay-2" style="margin-top:16px;">Contexto del dato y periodo.</p>
@@ -176,7 +176,7 @@ Catálogo de layouts para presentaciones Golgotha. Cada patrón describe intenci
 ```html
 <section class="slide s-white" data-screen-label="08 Tarjetas">
   <div class="frame">
-    <img class="brand-mark right" src="brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+    <img class="brand-mark right" src="brand/logo-lockup-light.png" alt="Golgotha Academy" />
     <p class="kicker a-rise">Fundamentos</p>
     <h2 class="h1 a-rise delay-1">Principios de diseño</h2>
     <div class="specimen-grid a-rise delay-3">
@@ -197,9 +197,9 @@ Catálogo de layouts para presentaciones Golgotha. Cada patrón describe intenci
 **Estructura:** kicker, cita, atribución, imagen opcional.
 
 ```html
-<section class="slide s-dark grid-bg" data-screen-label="09 Cita">
+<section class="slide s-dark grid-bg-dark" data-screen-label="09 Cita">
   <div class="frame" style="display:flex; flex-direction:column; justify-content:center;">
-    <img class="brand-mark right" src="brand/logo-lockup-white.svg" alt="Golgotha Academy" />
+    <img class="brand-mark right" src="brand/logo-lockup-white.png" alt="Golgotha Academy" />
     <p class="kicker a-rise">Cita</p>
     <p class="quote a-rise delay-1" style="max-width:16ch;">“Texto citado.”</p>
     <div class="slide-footer a-fade delay-4"><span class="caption">Autor / fuente</span><span class="caption">09</span></div>

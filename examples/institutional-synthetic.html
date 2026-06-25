@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ejemplo institucional sintético — Golgotha Academy</title>
+  <title>Ejemplo institucional sintetico - Golgotha Academy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -12,72 +12,129 @@
     * { box-sizing: border-box; }
     body { margin: 0; background: #111; font-family: Montserrat, system-ui, sans-serif; color: var(--fg); }
     .deck { display: grid; gap: 24px; padding: 24px; }
-    .slide { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background: var(--bg); padding: 72px 88px 88px; }
-    .green { background: linear-gradient(135deg, var(--green), var(--accent)); color: #fff; }
-    .dark { background: var(--dark); color: #fff; }
+    .slide { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background: var(--bg) url("../assets/backgrounds/grid-light.png") center / cover no-repeat; padding: 72px 88px 88px; }
+    .green { background: var(--green) url("../assets/backgrounds/grid-green.png") center / cover no-repeat; color: #fff; }
+    .dark { background: var(--dark) url("../assets/backgrounds/grid-dark.png") center / cover no-repeat; color: #fff; }
     .logo { position: absolute; top: 40px; right: 56px; height: 34px; }
-    .kicker { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
-    .green .kicker, .dark .kicker { color: rgba(255,255,255,.75); }
-    h1 { font-size: 74px; line-height: 1.04; letter-spacing: -.03em; max-width: 12ch; margin: 34px 0 0; }
-    h2 { font-size: 48px; line-height: 1.08; letter-spacing: -.02em; margin: 18px 0; max-width: 15ch; }
+    .kicker { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+    .green .kicker, .dark .kicker { color: rgba(255,255,255,.76); }
+    h1 { font-size: 76px; line-height: 1.04; letter-spacing: -.03em; max-width: 12ch; margin: 34px 0 0; }
+    h2 { font-size: 48px; line-height: 1.08; letter-spacing: -.02em; margin: 18px 0; max-width: 16ch; }
     h3 { font-size: 24px; margin: 0 0 10px; }
     p { font-size: 22px; line-height: 1.5; color: var(--muted); max-width: 58ch; }
     .green p, .dark p { color: rgba(255,255,255,.78); }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-    .card { border: 1px solid var(--border); border-radius: 28px; padding: 28px; background: #fff; min-height: 240px; box-shadow: 0 18px 52px rgba(0,0,0,.06); }
-    .table { border: 1px solid var(--border); border-radius: 22px; overflow: hidden; margin-top: 44px; background: #fff; }
-    table { width: 100%; border-collapse: collapse; font-size: 19px; }
-    th, td { text-align: left; padding: 20px 24px; border-bottom: 1px solid var(--border); }
-    th { background: var(--bg); color: var(--fg); }
-    td { color: var(--muted); }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; height: 100%; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; margin-top: 44px; }
+    .card { border-left: 6px solid var(--accent); padding: 8px 0 8px 22px; min-height: 180px; }
+    .media { border-radius: 36px; overflow: hidden; background: #fff; }
+    .media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 42px; margin-top: 48px; }
+    .metric { border-top: 4px solid var(--accent); padding-top: 22px; }
+    .metric strong { display: block; font-size: 58px; color: var(--accent); letter-spacing: -.04em; line-height: 1; margin-bottom: 12px; }
+    .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 48px; }
+    .step { border-left: 6px solid var(--accent); padding: 8px 0 8px 22px; min-height: 150px; }
+    .table { width: 100%; border-collapse: collapse; margin-top: 40px; background: #fff; border-radius: 22px; overflow: hidden; }
+    .table th, .table td { text-align: left; padding: 18px 22px; border-bottom: 1px solid var(--border); font-size: 18px; }
+    .table th { background: #F3F4F6; }
     .note { position: absolute; left: 88px; bottom: 40px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .dark .note, .green .note { color: rgba(255,255,255,.54); }
   </style>
 </head>
 <body>
-  <main class="deck" aria-label="Ejemplo institucional sintético">
+  <main class="deck" aria-label="Ejemplo institucional sintetico">
     <section class="slide">
-      <img class="logo" src="../assets/brand/logo-lockup-light.svg" alt="Golgotha Academy" />
-      <div class="kicker">Ejemplo sintético</div>
-      <h1>Ruta de formación para líderes</h1>
-      <p>Propuesta institucional ficticia para demostrar composición, tono y jerarquía visual.</p>
-      <div class="note">Referencia visual, no formato obligatorio</div>
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="kicker">Propuesta institucional</div>
+      <h1>Formacion clara para equipos que sirven mejor</h1>
+      <p>Deck sintetico para probar narrativa de propuesta, evidencia, metodologia y cierre.</p>
+      <div class="note">Fondo: grid-light.png</div>
     </section>
+
     <section class="slide">
-      <img class="logo" src="../assets/brand/logo-lockup-light.svg" alt="Golgotha Academy" />
-      <div class="kicker">Enfoque</div>
-      <h2>La ruta combina contenido, práctica y acompañamiento</h2>
-      <div class="grid">
-        <div class="card"><h3>Contenido</h3><p>Módulos con objetivos claros y lecturas guiadas.</p></div>
-        <div class="card"><h3>Práctica</h3><p>Ejercicios que conectan aprendizaje y servicio.</p></div>
-        <div class="card"><h3>Seguimiento</h3><p>Espacios de evaluación y retroalimentación.</p></div>
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="two">
+        <div>
+          <div class="kicker">Contexto</div>
+          <h2>La necesidad no es mas contenido, sino mejor acompanamiento</h2>
+          <p>La propuesta organiza objetivos, rutas de aprendizaje y seguimiento para que la formacion tenga continuidad.</p>
+        </div>
+        <div class="media" style="height:380px;"><img src="../assets/backgrounds/media-placeholder.png" alt="Espacio para recurso institucional" /></div>
       </div>
     </section>
-    <section class="slide dark">
-      <img class="logo" src="../assets/brand/logo-lockup-white.svg" alt="Golgotha Academy" />
-      <div class="kicker">Principio</div>
-      <h1>La formación debe poder practicarse</h1>
-      <p>Una propuesta es sólida cuando sus contenidos se convierten en hábitos observables.</p>
-    </section>
-    <section class="slide">
-      <img class="logo" src="../assets/brand/logo-lockup-light.svg" alt="Golgotha Academy" />
-      <div class="kicker">Alcance</div>
-      <h2>Los componentes se organizan por nivel</h2>
-      <div class="table">
-        <table>
-          <thead><tr><th>Nivel</th><th>Propósito</th><th>Evidencia</th></tr></thead>
-          <tbody>
-            <tr><td>Inicial</td><td>Fundamentos compartidos</td><td>Actividad guiada</td></tr>
-            <tr><td>Intermedio</td><td>Aplicación en contexto</td><td>Proyecto breve</td></tr>
-            <tr><td>Avanzado</td><td>Mentoría y servicio</td><td>Plan de acción</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+
     <section class="slide green">
-      <img class="logo" src="../assets/brand/logo-lockup-white.svg" alt="Golgotha Academy" />
-      <div class="kicker">Próximo paso</div>
-      <h1>Definir el primer grupo piloto</h1>
-      <p>La propuesta requiere audiencia, calendario y responsables antes de convertirse en plan operativo.</p>
+      <img class="logo" src="../assets/brand/logo-lockup-white.png" alt="Golgotha Academy" />
+      <div class="kicker">Oferta</div>
+      <h1>Un sistema formativo, no una charla aislada</h1>
+      <p>El valor institucional aparece cuando contenido, practica y seguimiento se disenan como una sola experiencia.</p>
+      <div class="note">Fondo: grid-green.png</div>
+    </section>
+
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="kicker">Metodologia</div>
+      <h2>Tres capas sostienen la implementacion</h2>
+      <div class="cards">
+        <div class="card"><h3>Diagnostico</h3><p>Clarificar audiencia, nivel, retos y metas antes de producir.</p></div>
+        <div class="card"><h3>Ruta</h3><p>Convertir objetivos en sesiones, practicas y recursos.</p></div>
+        <div class="card"><h3>Seguimiento</h3><p>Medir asistencia, avance y evidencia cualitativa.</p></div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="kicker">Indicadores</div>
+      <h2>Las metricas se muestran solo si tienen fuente</h2>
+      <div class="metric-row">
+        <div class="metric"><strong>--</strong><p>Participantes inscritos</p></div>
+        <div class="metric"><strong>--</strong><p>Sesiones completadas</p></div>
+        <div class="metric"><strong>--</strong><p>Evidencias revisadas</p></div>
+      </div>
+      <div class="note">Usar "--" cuando el dato no existe en la fuente</div>
+    </section>
+
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="two">
+        <div class="media" style="height:430px;"><img src="../assets/backgrounds/presenter-placeholder.png" alt="Espacio para imagen del presentador" /></div>
+        <div>
+          <div class="kicker">Presentador</div>
+          <h2>El facilitador debe tener presencia visual real</h2>
+          <p>Si falta la fotografia, se reserva el espacio con placeholder honesto y se reemplaza antes de entrega final.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="kicker">Plan de trabajo</div>
+      <h2>La ruta se entiende como una secuencia de decisiones</h2>
+      <div class="timeline">
+        <div class="step"><h3>1. Alcance</h3><p>Definir audiencia y objetivo.</p></div>
+        <div class="step"><h3>2. Diseno</h3><p>Mapear sesiones y practicas.</p></div>
+        <div class="step"><h3>3. Ejecucion</h3><p>Facilitar y documentar avance.</p></div>
+        <div class="step"><h3>4. Cierre</h3><p>Revisar evidencia y aprendizajes.</p></div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="kicker">Comparativo</div>
+      <h2>La decision mejora cuando se ven las opciones</h2>
+      <table class="table">
+        <tr><th>Modelo</th><th>Uso</th><th>Riesgo</th></tr>
+        <tr><td>Taller unico</td><td>Impulso inicial</td><td>Baja continuidad</td></tr>
+        <tr><td>Ruta modular</td><td>Proceso formativo</td><td>Requiere seguimiento</td></tr>
+        <tr><td>Acompanamiento</td><td>Transferencia a practica</td><td>Mayor coordinacion</td></tr>
+      </table>
+    </section>
+
+    <section class="slide dark">
+      <img class="logo" src="../assets/brand/logo-lockup-white.png" alt="Golgotha Academy" />
+      <div class="kicker">Cierre</div>
+      <h1>El siguiente paso es definir alcance</h1>
+      <p>Confirmar audiencia, duracion, responsables y evidencia esperada antes de producir el deck final.</p>
+      <div class="note">Fondo: grid-dark.png</div>
     </section>
   </main>
 </body>

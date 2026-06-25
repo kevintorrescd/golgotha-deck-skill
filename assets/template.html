@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title><!-- SKILL: título de la presentación --></title>
+  <title><!-- SKILL: t-tulo de la presentaci-n --></title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     /* ===========================================================
-       Deck framework — DO NOT EDIT below the "SLOT: theme tokens".
+       Deck framework - DO NOT EDIT below the "SLOT: theme tokens".
        =========================================================== */
     :root {
       /* SKILL: ajusta solo si la marca cambia. */
@@ -79,7 +79,7 @@
   </style>
   <style>
     /* ===========================================================
-       Golgotha Academy — component library
+       Golgotha Academy - component library
        =========================================================== */
 
     /* Background variants */
@@ -88,19 +88,27 @@
     .s-dark  { background: var(--dark); color: #fff; }
 
     .grid-bg {
-      background-image:
-        linear-gradient(rgba(255,255,255,0.14) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.14) 1px, transparent 1px);
-      background-size: 64px 64px;
+      background-image: url("backgrounds/grid-green.png");
+      background-size: cover;
+      background-position: center;
+    }
+    .grid-bg-green {
+      background-image: url("backgrounds/grid-green.png");
+      background-size: cover;
+      background-position: center;
+    }
+    .grid-bg-dark {
+      background-image: url("backgrounds/grid-dark.png");
+      background-size: cover;
+      background-position: center;
     }
     .grid-bg-light {
-      background-image:
-        linear-gradient(rgba(17,17,17,0.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(17,17,17,0.045) 1px, transparent 1px);
-      background-size: 64px 64px;
+      background-image: url("backgrounds/grid-light.png");
+      background-size: cover;
+      background-position: center;
     }
 
-    /* Logo — use prepared variants from assets/brand. */
+    /* Logo - use prepared variants from assets/brand. */
     .brand-mark {
       position: absolute; top: 56px; height: 44px; width: auto;
     }
@@ -144,11 +152,7 @@
     }
     .media-frame img, .media-frame svg { width: 100%; height: 100%; object-fit: cover; display: block; }
     .placeholder {
-      background:
-        linear-gradient(rgba(17,17,17,0.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(17,17,17,0.045) 1px, transparent 1px),
-        var(--neutral);
-      background-size: 48px 48px;
+      background: var(--neutral) url("backgrounds/media-placeholder.png") center / cover no-repeat;
       display: grid; place-items: center; color: var(--muted); font-weight: 600; font-size: 18px;
       width: 100%; height: 100%; min-height: 160px;
     }
@@ -305,26 +309,26 @@
   <div class="deck-shell">
     <div class="deck-stage" id="deck-stage">
 
-      <!-- SKILL SLOT 01: Portada — fondo blanco, título grande -->
+      <!-- SKILL SLOT 01: Portada - fondo blanco, t-tulo grande -->
       <section class="slide s-white active" data-screen-label="01 Portada">
         <div class="frame grid-bg-light">
-          <img class="brand-mark left" src="brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+          <img class="brand-mark left" src="brand/logo-lockup-light.png" alt="Golgotha Academy" />
           <div class="cover-content">
             <p class="kicker a-rise delay-1"><!-- Kicker --></p>
-            <h1 class="display a-rise delay-2"><!-- Título principal --></h1>
-            <p class="body-lg a-fade delay-3" style="margin-top:32px;"><!-- Subtítulo --></p>
+            <h1 class="display a-rise delay-2"><!-- T-tulo principal --></h1>
+            <p class="body-lg a-fade delay-3" style="margin-top:32px;"><!-- Subt-tulo --></p>
           </div>
         </div>
       </section>
 
-      <!-- SKILL SLOT 02: Contenido — dos columnas -->
+      <!-- SKILL SLOT 02: Content - two columns -->
       <section class="slide s-white" data-screen-label="02 Contenido">
         <div class="frame">
-          <img class="brand-mark right" src="brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+          <img class="brand-mark right" src="brand/logo-lockup-light.png" alt="Golgotha Academy" />
           <div class="col-2-wide" style="height:100%;">
             <div>
               <p class="kicker a-rise"><!-- Kicker --></p>
-              <h2 class="h1 a-rise delay-1"><!-- Título --></h2>
+              <h2 class="h1 a-rise delay-1"><!-- T-tulo --></h2>
               <p class="body a-fade delay-3"><!-- Cuerpo --></p>
             </div>
             <div class="media-frame a-scale delay-3" style="height:560px;">
@@ -334,12 +338,12 @@
         </div>
       </section>
 
-      <!-- SKILL SLOT 03: Datos — barras -->
+      <!-- SKILL SLOT 03: Data - bars -->
       <section class="slide s-white" data-screen-label="03 Datos">
         <div class="frame">
-          <img class="brand-mark right" src="brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+          <img class="brand-mark right" src="brand/logo-lockup-light.png" alt="Golgotha Academy" />
           <p class="kicker a-rise"><!-- Kicker --></p>
-          <h2 class="h1 a-rise delay-1"><!-- Título del dato --></h2>
+          <h2 class="h1 a-rise delay-1"><!-- T-tulo del dato --></h2>
           <p class="body a-fade delay-2" style="margin-top:16px;"><!-- Contexto --></p>
           <div class="chart a-rise delay-3" style="margin-top:40px;">
             <div class="bar-col"><div class="bar-value"><!-- valor --></div><div class="bar a-bar delay-1" style="height:120px;"></div><div class="bar-label"><!-- A --></div></div>
@@ -355,9 +359,9 @@
       </section>
 
       <!-- SKILL SLOT 04: Destacado verde -->
-      <section class="slide s-green grid-bg" data-screen-label="04 Destacado">
+      <section class="slide s-green grid-bg-green" data-screen-label="04 Destacado">
         <div class="frame" style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
-          <img class="brand-mark right" src="brand/logo-lockup-white.svg" alt="Golgotha Academy" />
+          <img class="brand-mark right" src="brand/logo-lockup-white.png" alt="Golgotha Academy" />
           <p class="kicker a-rise"><!-- Kicker --></p>
           <h2 class="display display-sm a-rise delay-1" style="max-width:14ch;"><!-- Frase de impacto --></h2>
           <p class="body-lg a-fade delay-3" style="margin-top:40px; color:rgba(255,255,255,0.82); max-width:36ch;"><!-- Contexto --></p>
@@ -367,30 +371,30 @@
       <!-- SKILL SLOT 05: Cierre -->
       <section class="slide s-white" data-screen-label="05 Cierre">
         <div class="frame closing">
-          <img class="brand-mark" src="brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+          <img class="brand-mark" src="brand/logo-lockup-light.png" alt="Golgotha Academy" />
           <p class="kicker a-rise delay-1"><!-- Kicker --></p>
           <h2 class="display display-sm a-rise delay-2"><!-- Mensaje final --></h2>
           <p class="body-lg a-fade delay-4" style="margin-top:40px; text-align:center;"><!-- CTA --></p>
         </div>
       </section>
 
-      <!-- SKILL: duplicar y adaptar los slots anteriores para más slides.
+      <!-- SKILL: duplicar y adaptar los slots anteriores para m-s slides.
            La primera diapositiva debe marcarse como slide + active;
            las demas solo como slide.
-           Ver references/layouts.md para más patrones:
-             09 Gráfico de líneas, 10 Gráfico de donut,
+           Ver references/layouts.md para m-s patrones:
+             09 Gr-fico de l-neas, 10 Gr-fico de donut,
              11 Tabla de datos, 12 Imagen a pantalla completa,
-             13 Galería de imágenes, 14 Línea de tiempo, 15 Bloque de código. -->
+             13 Galer-a de im-genes, 14 L-nea de tiempo, 15 Bloque de c-digo. -->
 
     </div>
   </div>
 
   <nav class="deck-counter" role="navigation" aria-label="Deck navigation">
-    <button type="button" id="deck-prev" aria-label="Previous slide">‹</button>
+    <button type="button" id="deck-prev" aria-label="Previous slide">9</button>
     <span class="deck-count"><span id="deck-cur">01</span> <span class="total">/ <span id="deck-total">01</span></span></span>
-    <button type="button" id="deck-next" aria-label="Next slide">›</button>
+    <button type="button" id="deck-next" aria-label="Next slide">:</button>
   </nav>
-  <div class="deck-hint">← / → · space</div>
+  <div class="deck-hint">- / - - space</div>
 
   <script>
     (function () {

@@ -407,6 +407,12 @@ function verifyHtml(input, report) {
   if (/assets\/logo\.svg|src=["'][^"']*logo\.svg/i.test(html)) {
     addFinding(report, "warning", "raw-logo-source", "HTML references the raw logo source; prefer a specific variant from assets/brand.");
   }
+  if (/brand\/logo-(?:lockup|mark)-[^"')\s]+\.svg/i.test(html)) {
+    addFinding(report, "error", "svg-logo-variant", "Logo variants must use transparent PNG files from assets/brand, not SVG files.");
+  }
+  if (/backgrounds\/(?:grid-(?:light|green|dark)|presenter-placeholder|media-placeholder)\.svg/i.test(html)) {
+    addFinding(report, "error", "svg-background-asset", "Background and placeholder assets must use PNG files from assets/backgrounds, not SVG files.");
+  }
 
   const isNavigableDeck = classLists.some((classes) => classes.includes("deck-stage")) || /id=["']deck-stage["']/.test(html);
   const activeSlides = slideClassLists.filter((classes) => classes.includes("active")).length;

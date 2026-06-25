@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 
 const root = path.resolve(__dirname, "..");
-const sourceLogo = path.join(root, "assets", "logo.svg");
+const sourceLogo = process.env.GA_LOGO_SOURCE ? path.resolve(process.env.GA_LOGO_SOURCE) : null;
 const brandDir = path.join(root, "assets", "brand");
 const bgDir = path.join(root, "assets", "backgrounds");
 
@@ -28,8 +28,58 @@ function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
 
+function normalize(content) {
+  return content.replace(/\n{3,}/g, "\n\n");
+}
+
 function write(file, content) {
-  fs.writeFileSync(file, content.replace(/\n{3,}/g, "\n\n"), "utf8");
+  fs.writeFileSync(file, normalize(content), "utf8");
+}
+
+async function writePng(sharp, file, svg, width, height) {
+  await sharp(Buffer.from(normalize(svg)), { density: 288 })
+    .resize(width, height, { fit: "contain" })
+    .png({ compressionLevel: 9, adaptiveFiltering: true })
+    .toFile(file);
+}
+
+function removeOldBrandSvgFiles() {
+  for (const file of fs.readdirSync(brandDir)) {
+    if (/^logo-(mark|lockup)-.*\.svg$/i.test(file)) {
+      fs.rmSync(path.join(brandDir, file));
+    }
+  }
+}
+
+function removeOldBackgroundSvgFiles() {
+  for (const file of fs.readdirSync(bgDir)) {
+    if (/^(grid-(light|green|dark)|presenter-placeholder|media-placeholder)\.svg$/i.test(file)) {
+      fs.rmSync(path.join(bgDir, file));
+    }
+  }
+}
+
+function requireSharp() {
+  let lastError;
+  try {
+    return require("sharp");
+  } catch (error) {
+    lastError = error;
+  }
+
+  for (const nodePath of (process.env.NODE_PATH || "").split(path.delimiter).filter(Boolean)) {
+    try {
+      return require(require.resolve("sharp", { paths: [nodePath] }));
+    } catch (error) {
+      lastError = error;
+      // Try the next NODE_PATH entry.
+    }
+  }
+
+  const detail = lastError && lastError.message ? ` Last error: ${lastError.message}` : "";
+  throw new Error(
+    `Missing dependency: sharp. Install it locally with \`npm install sharp\` or run this script with NODE_PATH pointing to a Node runtime that includes sharp and its dependencies.${detail}`,
+  );
 }
 
 function recolor(svg, color) {
@@ -108,38 +158,73 @@ function placeholder({ name, bg, fg, border, label }) {
 ensureDir(brandDir);
 ensureDir(bgDir);
 
-const source = fs.readFileSync(sourceLogo, "utf8");
+async function renderPngVariants() {
+  const sharp = requireSharp();
 
-write(path.join(brandDir, "logo-mark-white.svg"), markSvg(source, palette.white));
-write(path.join(brandDir, "logo-mark-black.svg"), markSvg(source, palette.fg));
-write(path.join(brandDir, "logo-mark-green.svg"), markSvg(source, palette.accentDeep));
-write(path.join(brandDir, "logo-mark-gray.svg"), markSvg(source, palette.gray));
+  removeOldBrandSvgFiles();
 
-write(path.join(brandDir, "logo-lockup-light.svg"), lockupSvg(source, palette.accentDeep, palette.fg, "positive color lockup"));
-write(path.join(brandDir, "logo-lockup-white.svg"), lockupSvg(source, palette.white, palette.white, "negative white lockup"));
-write(path.join(brandDir, "logo-lockup-black.svg"), lockupSvg(source, palette.fg, palette.fg, "black lockup"));
-write(path.join(brandDir, "logo-lockup-gray.svg"), lockupSvg(source, palette.gray, palette.gray, "grayscale lockup"));
+  if (sourceLogo) {
+    if (!fs.existsSync(sourceLogo)) {
+      throw new Error(`GA_LOGO_SOURCE does not exist: ${sourceLogo}`);
+    }
 
-write(
-  path.join(bgDir, "grid-green.svg"),
-  gridBackground({ name: "Golgotha green grid background", base: palette.accentDeep, line: "rgba(255,255,255,0.18)", glow: palette.accent, dark: true }),
-);
-write(
-  path.join(bgDir, "grid-dark.svg"),
-  gridBackground({ name: "Golgotha dark grid background", base: palette.dark, line: "rgba(255,255,255,0.08)", glow: palette.darkSoft, dark: true }),
-);
-write(
-  path.join(bgDir, "grid-light.svg"),
-  gridBackground({ name: "Golgotha light grid background", base: palette.bg, line: "rgba(17,17,17,0.055)", glow: palette.surface, dark: false }),
-);
-write(
-  path.join(bgDir, "presenter-placeholder.svg"),
-  placeholder({ name: "Presenter image placeholder", bg: palette.neutral, fg: palette.muted, border: "#D1D5DB", label: "Espacio para imagen del presentador" }),
-);
-write(
-  path.join(bgDir, "media-placeholder.svg"),
-  placeholder({ name: "Media placeholder", bg: palette.surface, fg: palette.muted, border: palette.border, label: "Espacio para imagen o recurso visual" }),
-);
+    const source = fs.readFileSync(sourceLogo, "utf8");
+    const variants = [
+      ["logo-mark-white", markSvg(source, palette.white), 1024, 1024],
+      ["logo-mark-black", markSvg(source, palette.fg), 1024, 1024],
+      ["logo-mark-green", markSvg(source, palette.accentDeep), 1024, 1024],
+      ["logo-mark-gray", markSvg(source, palette.gray), 1024, 1024],
+      ["logo-lockup-light", lockupSvg(source, palette.accentDeep, palette.fg, "positive color lockup"), 1800, 360],
+      ["logo-lockup-white", lockupSvg(source, palette.white, palette.white, "negative white lockup"), 1800, 360],
+      ["logo-lockup-black", lockupSvg(source, palette.fg, palette.fg, "black lockup"), 1800, 360],
+      ["logo-lockup-gray", lockupSvg(source, palette.gray, palette.gray, "grayscale lockup"), 1800, 360],
+    ];
+
+    await writePng(sharp, path.join(root, "assets", "logo.png"), markSvg(source, palette.accentDeep), 1024, 1024);
+
+    for (const [name, svg, width, height] of variants) {
+      await writePng(sharp, path.join(brandDir, `${name}.png`), svg, width, height);
+    }
+  }
+
+  const backgrounds = [
+    [
+      "grid-green",
+      gridBackground({ name: "Golgotha green grid background", base: palette.accentDeep, line: "rgba(255,255,255,0.18)", glow: palette.accent, dark: true }),
+      1920,
+      1080,
+    ],
+    [
+      "grid-dark",
+      gridBackground({ name: "Golgotha dark grid background", base: palette.dark, line: "rgba(255,255,255,0.08)", glow: palette.darkSoft, dark: true }),
+      1920,
+      1080,
+    ],
+    [
+      "grid-light",
+      gridBackground({ name: "Golgotha light grid background", base: palette.bg, line: "rgba(17,17,17,0.055)", glow: palette.surface, dark: false }),
+      1920,
+      1080,
+    ],
+    [
+      "presenter-placeholder",
+      placeholder({ name: "Presenter image placeholder", bg: palette.neutral, fg: palette.muted, border: "#D1D5DB", label: "Espacio para imagen del presentador" }),
+      1280,
+      720,
+    ],
+    [
+      "media-placeholder",
+      placeholder({ name: "Media placeholder", bg: palette.surface, fg: palette.muted, border: palette.border, label: "Espacio para imagen o recurso visual" }),
+      1280,
+      720,
+    ],
+  ];
+
+  removeOldBackgroundSvgFiles();
+  for (const [name, svg, width, height] of backgrounds) {
+    await writePng(sharp, path.join(bgDir, `${name}.png`), svg, width, height);
+  }
+}
 
 write(
   path.join(root, "assets", "tokens.css"),
@@ -160,5 +245,12 @@ write(
 `,
 );
 
-console.log(`Generated brand assets in ${brandDir}`);
-console.log(`Generated background assets in ${bgDir}`);
+renderPngVariants()
+  .then(() => {
+    console.log(sourceLogo ? `Generated brand assets in ${brandDir}` : "Skipped brand assets; set GA_LOGO_SOURCE to regenerate logo PNGs.");
+    console.log(`Generated background assets in ${bgDir}`);
+  })
+  .catch((error) => {
+    console.error(error.message);
+    process.exit(1);
+  });

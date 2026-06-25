@@ -13,26 +13,28 @@ const requiredFiles = [
   "references/checklist.md",
   "references/source-to-deck.md",
   "references/brand-assets.md",
+  "references/production-engines.md",
   "references/delivery-qa.md",
   "assets/template.html",
   "assets/template.html.artifact.json",
-  "assets/logo.svg",
+  "assets/logo.png",
   "assets/tokens.css",
-  "assets/brand/logo-lockup-light.svg",
-  "assets/brand/logo-lockup-white.svg",
-  "assets/brand/logo-lockup-black.svg",
-  "assets/brand/logo-lockup-gray.svg",
-  "assets/brand/logo-mark-green.svg",
-  "assets/brand/logo-mark-white.svg",
-  "assets/brand/logo-mark-black.svg",
-  "assets/brand/logo-mark-gray.svg",
-  "assets/backgrounds/grid-light.svg",
-  "assets/backgrounds/grid-green.svg",
-  "assets/backgrounds/grid-dark.svg",
-  "assets/backgrounds/presenter-placeholder.svg",
-  "assets/backgrounds/media-placeholder.svg",
+  "assets/brand/logo-lockup-light.png",
+  "assets/brand/logo-lockup-white.png",
+  "assets/brand/logo-lockup-black.png",
+  "assets/brand/logo-lockup-gray.png",
+  "assets/brand/logo-mark-green.png",
+  "assets/brand/logo-mark-white.png",
+  "assets/brand/logo-mark-black.png",
+  "assets/brand/logo-mark-gray.png",
+  "assets/backgrounds/grid-light.png",
+  "assets/backgrounds/grid-green.png",
+  "assets/backgrounds/grid-dark.png",
+  "assets/backgrounds/presenter-placeholder.png",
+  "assets/backgrounds/media-placeholder.png",
   "examples/educational-synthetic.html",
   "examples/institutional-synthetic.html",
+  "examples/charts-explanatory.html",
   "scripts/verify-presentation.js",
 ];
 
@@ -43,6 +45,7 @@ const docsToScan = [
   "references/checklist.md",
   "references/source-to-deck.md",
   "references/brand-assets.md",
+  "references/production-engines.md",
   "references/delivery-qa.md",
 ];
 
@@ -61,13 +64,24 @@ function warn(message) {
   warnings.push(message);
 }
 
-for (const file of requiredFiles) {
+  for (const file of requiredFiles) {
   if (!fs.existsSync(rel(file))) fail(`Missing required file: ${file}`);
+}
+
+for (const file of fs.readdirSync(rel("assets"), { recursive: true })) {
+  if (typeof file === "string" && file.toLowerCase().endsWith(".svg")) {
+    fail(`SVG files are not allowed in packaged assets: assets/${file}`);
+  }
 }
 
 if (errors.length === 0) {
   const template = read("assets/template.html");
   const layouts = read("references/layouts.md");
+  const examples = [
+    read("examples/educational-synthetic.html"),
+    read("examples/institutional-synthetic.html"),
+    read("examples/charts-explanatory.html"),
+  ].join("\n");
   const artifact = JSON.parse(read("assets/template.html.artifact.json"));
 
   const requiredTemplateFragments = [
@@ -96,8 +110,28 @@ if (errors.length === 0) {
     fail("Template must use real logo variants from assets/brand instead of CSS filter inversion");
   }
 
-  if (!template.includes("brand/logo-lockup-light.svg") || !template.includes("brand/logo-lockup-white.svg")) {
+  if (!template.includes("brand/logo-lockup-light.png") || !template.includes("brand/logo-lockup-white.png")) {
     fail("Template must use positive and negative logo assets from assets/brand");
+  }
+
+  if (/brand\/logo-(?:lockup|mark)-[^"')\s]+\.svg/i.test(template) || /brand\/logo-(?:lockup|mark)-[^"')\s]+\.svg/i.test(layouts)) {
+    fail("Logo variants used in deliverables must be transparent PNG files, not SVG files");
+  }
+
+  for (const background of ["grid-light.png", "grid-green.png", "grid-dark.png", "media-placeholder.png"]) {
+    if (!template.includes(`backgrounds/${background}`)) {
+      fail(`Template must use the packaged background asset: backgrounds/${background}`);
+    }
+  }
+
+  for (const background of ["grid-light.png", "grid-green.png", "grid-dark.png"]) {
+    if (!examples.includes(`backgrounds/${background}`)) {
+      fail(`Synthetic examples must use the packaged background asset: backgrounds/${background}`);
+    }
+  }
+
+  if (/backgrounds\/(?:grid-(?:light|green|dark)|presenter-placeholder|media-placeholder)\.svg/i.test(`${template}\n${layouts}\n${examples}`)) {
+    fail("Background assets used in deliverables must be PNG files, not SVG files");
   }
 
   const placeholderBlock = template.match(/\.placeholder\s*\{[\s\S]*?\}/);
@@ -177,6 +211,9 @@ if (errors.length === 0) {
   const skill = read("SKILL.md");
   if (!/verify-presentation\.js/.test(skill) || !/delivery-qa\.md/.test(skill)) {
     fail("SKILL.md must document the pre-delivery QA verifier and delivery-qa reference");
+  }
+  if (!/production-engines\.md/.test(skill) || !/pptxgenjs/.test(skill) || !/python-pptx/.test(skill)) {
+    fail("SKILL.md must require production engine selection before final deck generation");
   }
 
   const deliveryQa = read("references/delivery-qa.md");

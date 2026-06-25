@@ -118,18 +118,18 @@ No usar:
 
 ## 6. Logo y versiones
 
-Usar los assets generados desde `assets/logo.svg`. No recrear el logo con texto suelto ni dibujar el símbolo desde cero.
+Usar los PNG transparentes incluidos en `assets/brand/`. No recrear el logo con texto suelto, no dibujar el símbolo desde cero y no incrustar SVG de logo en entregables.
 
 | Uso | Asset recomendado |
 |---|---|
-| Fondo claro | `assets/brand/logo-lockup-light.svg` |
-| Fondo oscuro o verde | `assets/brand/logo-lockup-white.svg` |
-| Pieza monocroma negra | `assets/brand/logo-lockup-black.svg` |
-| Pieza de baja jerarquía o grayscale | `assets/brand/logo-lockup-gray.svg` |
-| Solo símbolo en verde | `assets/brand/logo-mark-green.svg` |
-| Solo símbolo en blanco | `assets/brand/logo-mark-white.svg` |
-| Solo símbolo en negro | `assets/brand/logo-mark-black.svg` |
-| Solo símbolo en gris | `assets/brand/logo-mark-gray.svg` |
+| Fondo claro | `assets/brand/logo-lockup-light.png` |
+| Fondo oscuro o verde | `assets/brand/logo-lockup-white.png` |
+| Pieza monocroma negra | `assets/brand/logo-lockup-black.png` |
+| Pieza de baja jerarquía o grayscale | `assets/brand/logo-lockup-gray.png` |
+| Solo símbolo en verde | `assets/brand/logo-mark-green.png` |
+| Solo símbolo en blanco | `assets/brand/logo-mark-white.png` |
+| Solo símbolo en negro | `assets/brand/logo-mark-black.png` |
+| Solo símbolo en gris | `assets/brand/logo-mark-gray.png` |
 
 **Reglas**
 
@@ -142,16 +142,18 @@ Usar los assets generados desde `assets/logo.svg`. No recrear el logo con texto 
 
 ## 7. Fondos y assets reutilizables
 
+Usar los PNG de `assets/backgrounds/` como fuente visual predeterminada para grillas, fondos de sección y placeholders. No reconstruir estas superficies con gradientes, patrones CSS o formas manuales salvo que el formato final no pueda insertar imágenes.
+
 | Asset | Uso |
 |---|---|
-| `assets/backgrounds/grid-light.svg` | Fondos claros con textura apenas visible |
-| `assets/backgrounds/grid-green.svg` | Portadas, cierres, secciones verdes |
-| `assets/backgrounds/grid-dark.svg` | Citas, grandes preguntas, pausas oscuras |
-| `assets/backgrounds/presenter-placeholder.svg` | Reserva de espacio para imagen del presentador |
-| `assets/backgrounds/media-placeholder.svg` | Reserva de espacio para gráfico, captura o imagen |
+| `assets/backgrounds/grid-light.png` | Fondos claros con textura apenas visible |
+| `assets/backgrounds/grid-green.png` | Portadas, cierres, secciones verdes |
+| `assets/backgrounds/grid-dark.png` | Citas, grandes preguntas, pausas oscuras |
+| `assets/backgrounds/presenter-placeholder.png` | Reserva de espacio para imagen del presentador |
+| `assets/backgrounds/media-placeholder.png` | Reserva de espacio para gráfico, captura o imagen |
 | `assets/tokens.css` | Tokens CSS reutilizables |
 
-Los fondos con grilla son textura, no contenido. Deben ser sutiles y nunca competir con texto, datos o imagen.
+Los fondos con grilla son textura, no contenido. Deben ser sutiles y nunca competir con texto, datos o imagen. Si una herramienta requiere reconstruirlos, copiar proporción 16:9, color base y densidad de grilla desde el PNG correspondiente.
 
 ---
 
@@ -170,10 +172,13 @@ Los fondos con grilla son textura, no contenido. Deben ser sutiles y nunca compe
 - Una idea principal por slide.
 - Un punto focal claro: título, dato, cita, imagen o diagrama.
 - Las tarjetas solo se usan para elementos realmente comparables.
+- Evita contenedores dentro de contenedores. Usa espacio, alineacion, escala y acentos laterales antes que tarjetas para cada bloque.
+- Usa paneles o tarjetas solo cuando resalten algo especifico: tabla, media, placeholder, metrica aislada o conjunto comparable.
 - Las tablas no deben superar 4 columnas ni 5 filas visibles.
 - Las líneas de tiempo no deben superar 4 pasos por slide.
 - Las galerías funcionan mejor con 2–4 imágenes.
 - Los gráficos deben mostrar fuente o nota de procedencia.
+- Los gráficos deben respirar en el canvas; no encierres el gráfico y el texto explicativo en tarjetas o paneles si la composición ya los separa con espacio, escala y alineación.
 - Los bloques de presentador o media deben tener escala generosa y esquinas amplias.
 
 ---
@@ -210,8 +215,8 @@ Estas reglas aplican solo si se usa `assets/template.html` como referencia visua
 - Canvas fijo: 1920 × 1080 px.
 - La estructura `.deck-shell`, `.deck-stage`, `.slide`, `.deck-counter`, `.deck-hint`, `@media print` y el script de navegación no debe romperse.
 - La primera slide usa `.active`; las demás no.
-- Los fondos usan `.s-white`, `.s-green` o `.s-dark`.
-- Usar los logos de `assets/brand/`; no aplicar filtros para simular versiones.
+- Los fondos usan `.s-white`, `.s-green` o `.s-dark` junto con las imágenes PNG de `assets/backgrounds/`.
+- Usar los logos PNG de `assets/brand/`; no aplicar filtros para simular versiones.
 - Las animaciones son decorativas.
 - El contenido debe ser legible si todas las animaciones se desactivan.
 

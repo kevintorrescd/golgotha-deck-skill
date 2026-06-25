@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejemplo de graficos explicativos - Golgotha Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg: #F8FAFC; --fg: #111111; --muted: #4B5563; --border: #E5E7EB; --accent: #00D47E; --green: #059669; --dark: #111111; --soft: #ECFDF5; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #111; font-family: Montserrat, system-ui, sans-serif; color: var(--fg); }
+    .deck { display: grid; gap: 24px; padding: 24px; }
+    .slide { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background: var(--bg) url("../assets/backgrounds/grid-light.png") center / cover no-repeat; padding: 72px 88px 88px; }
+    .dark { background: var(--dark) url("../assets/backgrounds/grid-dark.png") center / cover no-repeat; color: #fff; }
+    .green { background: var(--green) url("../assets/backgrounds/grid-green.png") center / cover no-repeat; color: #fff; }
+    .logo { position: absolute; top: 40px; right: 56px; height: 34px; }
+    .kicker { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+    .dark .kicker, .green .kicker { color: rgba(255,255,255,.76); }
+    h1 { font-size: 72px; line-height: 1.04; letter-spacing: -.03em; max-width: 13ch; margin: 34px 0 0; }
+    h2 { font-size: 44px; line-height: 1.08; letter-spacing: -.02em; margin: 18px 0; max-width: 16ch; }
+    h3 { font-size: 22px; margin: 0 0 10px; }
+    p { font-size: 20px; line-height: 1.48; color: var(--muted); max-width: 54ch; }
+    .dark p, .green p { color: rgba(255,255,255,.78); }
+    .two { display: grid; grid-template-columns: .78fr 1.22fr; gap: 70px; align-items: center; height: 100%; }
+    .explain { align-self: center; }
+    .chart-area { min-height: 430px; display: grid; align-items: center; }
+    .bar-chart { height: 310px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; align-items: end; }
+    .bar { display: grid; align-content: end; gap: 12px; text-align: center; color: var(--muted); font-size: 15px; }
+    .bar span { display: block; background: var(--green); border-radius: 18px 18px 0 0; min-height: 60px; }
+    .value { color: var(--fg); font-size: 26px; font-weight: 800; }
+    .line-svg { width: 100%; height: 310px; }
+    .line-path { fill: none; stroke: var(--accent); stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+    .axis { stroke: #CBD5E1; stroke-width: 3; }
+    .donut-wrap { display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: center; height: 310px; }
+    .donut { width: 260px; height: 260px; border-radius: 50%; background: conic-gradient(var(--accent) 0 62%, #111 62% 78%, #E5E7EB 78% 100%); display: grid; place-items: center; }
+    .donut::after { content: "62%"; width: 150px; height: 150px; border-radius: 50%; background: #fff; display: grid; place-items: center; font-size: 34px; font-weight: 800; }
+    .legend { display: grid; gap: 16px; font-size: 20px; }
+    .legend b { display: inline-block; width: 14px; height: 14px; border-radius: 50%; margin-right: 12px; }
+    .metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; height: 310px; align-items: stretch; }
+    .metric { border-left: 6px solid var(--accent); padding: 10px 24px; display: grid; align-content: center; }
+    .metric strong { font-size: 58px; line-height: 1; color: var(--green); letter-spacing: -.04em; }
+    .table { width: 100%; border-collapse: collapse; margin-top: 16px; overflow: hidden; border-radius: 20px; }
+    .table th, .table td { text-align: left; padding: 17px 18px; border-bottom: 1px solid var(--border); font-size: 17px; }
+    .table th { background: #F3F4F6; }
+    .source { position: absolute; left: 88px; bottom: 40px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .dark .source, .green .source { color: rgba(255,255,255,.54); }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-label="Ejemplo de graficos explicativos">
+    <section class="slide green">
+      <img class="logo" src="../assets/brand/logo-lockup-white.png" alt="Golgotha Academy" />
+      <div class="kicker">Galeria de graficos</div>
+      <h1>El grafico empieza con la pregunta</h1>
+      <p>Usa este ejemplo cuando el deck necesita explicar datos con texto breve dentro del propio slide.</p>
+      <div class="source">Fondo: grid-green.png</div>
+    </section>
+
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="two">
+        <div class="explain">
+          <div class="kicker">Barras</div>
+          <h2>Usar para comparar categorias</h2>
+          <p>Elige barras cuando la pregunta sea "cual grupo es mayor". Ordena de mayor a menor si no hay secuencia natural.</p>
+        </div>
+        <div class="chart-area">
+          <div class="bar-chart">
+            <div class="bar"><div class="value">18</div><span style="height:110px"></span><em>A</em></div>
+            <div class="bar"><div class="value">34</div><span style="height:210px"></span><em>B</em></div>
+            <div class="bar"><div class="value">27</div><span style="height:168px"></span><em>C</em></div>
+            <div class="bar"><div class="value">42</div><span style="height:260px"></span><em>D</em></div>
+          </div>
+        </div>
+      </div>
+      <div class="source">Fuente: ejemplo sintetico</div>
+    </section>
+
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="two">
+        <div class="explain">
+          <div class="kicker">Linea</div>
+          <h2>Usar para mostrar cambio en el tiempo</h2>
+          <p>La linea funciona cuando el eje principal es temporal. Anota el evento que explica un quiebre o aceleracion.</p>
+        </div>
+        <div class="chart-area">
+          <svg class="line-svg" viewBox="0 0 560 310" role="img" aria-label="Tendencia sintetica">
+            <path class="axis" d="M40 260H530M40 40V260" />
+            <path class="line-path" d="M55 230 C120 210 145 175 205 180 S310 120 365 128 S445 70 515 78" />
+            <g fill="#00D47E"><circle cx="55" cy="230" r="8"/><circle cx="205" cy="180" r="8"/><circle cx="365" cy="128" r="8"/><circle cx="515" cy="78" r="8"/></g>
+          </svg>
+        </div>
+      </div>
+      <div class="source">Fuente: ejemplo sintetico</div>
+    </section>
+
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="two">
+        <div class="explain">
+          <div class="kicker">Donut</div>
+          <h2>Usar solo para pocas partes de un total</h2>
+          <p>Evita donuts con muchas categorias. Si hay mas de tres partes, usa barras o tabla.</p>
+        </div>
+        <div class="chart-area">
+          <div class="donut-wrap">
+            <div class="donut"></div>
+            <div class="legend">
+              <div><b style="background:#00D47E"></b>Completado</div>
+              <div><b style="background:#111"></b>En progreso</div>
+              <div><b style="background:#E5E7EB"></b>Pendiente</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="source">Fuente: ejemplo sintetico</div>
+    </section>
+
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="two">
+        <div class="explain">
+          <div class="kicker">Metricas</div>
+          <h2>Usar para indicadores ejecutivos</h2>
+          <p>Una tarjeta de metrica debe incluir numero, etiqueta y unidad. Si falta el dato, usa "--" y no lo inventes.</p>
+        </div>
+        <div class="chart-area">
+          <div class="metric-grid">
+            <div class="metric"><strong>--</strong><p>Inscritos confirmados</p></div>
+            <div class="metric"><strong>78%</strong><p>Asistencia promedio</p></div>
+            <div class="metric"><strong>12</strong><p>Sesiones activas</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="source">Fuente: ejemplo sintetico</div>
+    </section>
+
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="two">
+        <div class="explain">
+          <div class="kicker">Tabla</div>
+          <h2>Usar para comparar detalles</h2>
+          <p>La tabla sirve cuando el lector necesita revisar valores especificos. Mantenla corta: maximo 4 columnas y 5 filas visibles.</p>
+        </div>
+        <div class="chart-area">
+          <table class="table">
+            <tr><th>Grupo</th><th>Avance</th><th>Riesgo</th></tr>
+            <tr><td>A</td><td>Alto</td><td>Bajo</td></tr>
+            <tr><td>B</td><td>Medio</td><td>Medio</td></tr>
+            <tr><td>C</td><td>Bajo</td><td>Alto</td></tr>
+            <tr><td>D</td><td>Medio</td><td>Bajo</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="source">Fuente: ejemplo sintetico</div>
+    </section>
+
+    <section class="slide dark">
+      <img class="logo" src="../assets/brand/logo-lockup-white.png" alt="Golgotha Academy" />
+      <div class="kicker">Regla final</div>
+      <h1>Sin fuente, no hay cifra</h1>
+      <p>Cuando el contenido no trae dato verificable, muestra "--", "dato pendiente" o una nota de fuente pendiente.</p>
+      <div class="source">Fondo: grid-dark.png</div>
+    </section>
+  </main>
+</body>
+</html>

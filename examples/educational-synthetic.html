@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ejemplo educativo sintético — Golgotha Academy</title>
+  <title>Ejemplo educativo sintetico - Golgotha Academy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -12,66 +12,119 @@
     * { box-sizing: border-box; }
     body { margin: 0; background: #111; font-family: Montserrat, system-ui, sans-serif; color: var(--fg); }
     .deck { display: grid; gap: 24px; padding: 24px; }
-    .slide { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background: var(--bg); padding: 72px 88px 88px; }
-    .green { background: linear-gradient(135deg, var(--green), var(--accent)); color: #fff; }
-    .dark { background: var(--dark); color: #fff; }
+    .slide { width: 1280px; height: 720px; margin: 0 auto; position: relative; overflow: hidden; background: var(--bg) url("../assets/backgrounds/grid-light.png") center / cover no-repeat; padding: 72px 88px 88px; }
+    .green { background: var(--green) url("../assets/backgrounds/grid-green.png") center / cover no-repeat; color: #fff; }
+    .dark { background: var(--dark) url("../assets/backgrounds/grid-dark.png") center / cover no-repeat; color: #fff; }
     .logo { position: absolute; top: 40px; right: 56px; height: 34px; }
-    .kicker { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
-    .green .kicker, .dark .kicker { color: rgba(255,255,255,.75); }
+    .kicker { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+    .green .kicker, .dark .kicker { color: rgba(255,255,255,.76); }
     h1 { font-size: 76px; line-height: 1.04; letter-spacing: -.03em; max-width: 12ch; margin: 34px 0 0; }
-    h2 { font-size: 48px; line-height: 1.08; letter-spacing: -.02em; margin: 18px 0; max-width: 15ch; }
+    h2 { font-size: 48px; line-height: 1.08; letter-spacing: -.02em; margin: 18px 0; max-width: 16ch; }
     h3 { font-size: 24px; margin: 0 0 10px; }
     p { font-size: 22px; line-height: 1.5; color: var(--muted); max-width: 58ch; }
     .green p, .dark p { color: rgba(255,255,255,.78); }
     .two { display: grid; grid-template-columns: 1.05fr .95fr; gap: 64px; align-items: center; height: 100%; }
-    .panel { border: 1px solid var(--border); border-radius: 24px; padding: 30px; background: #fff; box-shadow: 0 20px 48px rgba(0,0,0,.07); }
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 44px; }
-    .card { border: 1px solid var(--border); border-radius: 28px; padding: 28px; background: #fff; min-height: 210px; box-shadow: 0 18px 52px rgba(0,0,0,.06); }
+    .callout { border-left: 6px solid var(--accent); padding-left: 28px; }
+    .media { border-radius: 36px; overflow: hidden; background: #fff; }
+    .media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; margin-top: 44px; }
     .stat { font-size: 132px; line-height: 1; font-weight: 800; color: var(--accent); letter-spacing: -.04em; margin: 28px 0 12px; }
+    .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 48px; }
+    .step { border-left: 6px solid var(--accent); padding: 8px 0 8px 22px; min-height: 150px; }
+    .table { width: 100%; border-collapse: collapse; margin-top: 40px; background: #fff; border-radius: 22px; overflow: hidden; }
+    .table th, .table td { text-align: left; padding: 18px 22px; border-bottom: 1px solid var(--border); font-size: 18px; }
+    .table th { background: #F3F4F6; }
+    .quote { font-size: 54px; line-height: 1.15; max-width: 18ch; font-weight: 700; letter-spacing: -.02em; margin-top: 110px; }
     .note { position: absolute; left: 88px; bottom: 40px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .dark .note, .green .note { color: rgba(255,255,255,.54); }
   </style>
 </head>
 <body>
-  <main class="deck" aria-label="Ejemplo educativo sintético">
+  <main class="deck" aria-label="Ejemplo educativo sintetico">
     <section class="slide">
-      <img class="logo" src="../assets/brand/logo-lockup-light.svg" alt="Golgotha Academy" />
-      <div class="kicker">Ejemplo sintético</div>
-      <h1>Fundamentos de interpretación bíblica</h1>
-      <p>Secuencia de clase creada para mostrar el sistema visual; no representa contenido curricular real.</p>
-      <div class="note">Referencia visual, no formato obligatorio</div>
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="kicker">Curso base</div>
+      <h1>Fundamentos de interpretacion biblica</h1>
+      <p>Secuencia de clase creada para probar portada, ritmo educativo y uso de assets reales.</p>
+      <div class="note">Fondo: grid-light.png</div>
     </section>
+
     <section class="slide">
-      <img class="logo" src="../assets/brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
       <div class="two">
         <div>
           <div class="kicker">Objetivo</div>
           <h2>Leer el texto antes de explicar el texto</h2>
-          <p>La clase introduce una práctica simple: observar, preguntar y aplicar sin saltar directamente a conclusiones.</p>
+          <p>La clase introduce una practica simple: observar, preguntar y aplicar sin saltar directamente a conclusiones.</p>
         </div>
-        <div class="panel"><h3>Práctica guiada</h3><p>Los estudiantes comparan contexto, audiencia y género literario antes de redactar una síntesis.</p></div>
+        <div class="callout"><h3>Practica guiada</h3><p>Los estudiantes comparan contexto, audiencia y genero literario antes de redactar una sintesis.</p></div>
       </div>
     </section>
+
     <section class="slide green">
-      <img class="logo" src="../assets/brand/logo-lockup-white.svg" alt="Golgotha Academy" />
-      <div class="kicker">Síntesis</div>
-      <h1>La interpretación empieza con atención</h1>
-      <p>La claridad no nace de decir más, sino de mirar mejor lo que el texto ya presenta.</p>
+      <img class="logo" src="../assets/brand/logo-lockup-white.png" alt="Golgotha Academy" />
+      <div class="kicker">Sintesis</div>
+      <h1>La interpretacion empieza con atencion</h1>
+      <p>La claridad no nace de decir mas, sino de mirar mejor lo que el texto ya presenta.</p>
+      <div class="note">Fondo: grid-green.png</div>
     </section>
+
     <section class="slide">
-      <img class="logo" src="../assets/brand/logo-lockup-light.svg" alt="Golgotha Academy" />
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
       <div class="kicker">Proceso</div>
-      <h2>Cuatro pasos sostienen la práctica</h2>
-      <div class="cards">
-        <div class="card"><h3>Observar</h3><p>Identificar repeticiones, contrastes y estructura.</p></div>
-        <div class="card"><h3>Preguntar</h3><p>Separar dudas reales de suposiciones rápidas.</p></div>
-        <div class="card"><h3>Aplicar</h3><p>Conectar la lectura con una respuesta concreta.</p></div>
+      <h2>Cuatro pasos sostienen la practica</h2>
+      <div class="timeline">
+        <div class="step"><h3>Observar</h3><p>Identificar repeticiones, contrastes y estructura.</p></div>
+        <div class="step"><h3>Preguntar</h3><p>Separar dudas reales de suposiciones rapidas.</p></div>
+        <div class="step"><h3>Interpretar</h3><p>Conectar contexto, genero y argumento.</p></div>
+        <div class="step"><h3>Aplicar</h3><p>Responder con una accion concreta.</p></div>
       </div>
     </section>
+
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="two">
+        <div>
+          <div class="kicker">Recurso visual pendiente</div>
+          <h2>Reservar el espacio tambien comunica prioridad</h2>
+          <p>Cuando falta una captura, grafico o imagen de apoyo, se usa un placeholder real y honesto.</p>
+        </div>
+        <div class="media" style="height:390px;"><img src="../assets/backgrounds/media-placeholder.png" alt="Espacio para recurso visual" /></div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="kicker">Evaluacion</div>
+      <h2>La rubrica distingue lectura, evidencia y aplicacion</h2>
+      <table class="table">
+        <tr><th>Criterio</th><th>Evidencia esperada</th><th>Estado</th></tr>
+        <tr><td>Observacion</td><td>Rasgos visibles del pasaje</td><td>Completo</td></tr>
+        <tr><td>Contexto</td><td>Autor, audiencia y situacion</td><td>En progreso</td></tr>
+        <tr><td>Aplicacion</td><td>Respuesta concreta y verificable</td><td>Pendiente</td></tr>
+      </table>
+    </section>
+
+    <section class="slide">
+      <img class="logo" src="../assets/brand/logo-lockup-light.png" alt="Golgotha Academy" />
+      <div class="kicker">Dato de clase</div>
+      <div class="stat">4</div>
+      <h2>momentos bastan para estructurar la lectura</h2>
+      <p>Dato pedagogico del ejemplo; reemplazar por metrica real o marcar como pendiente.</p>
+    </section>
+
     <section class="slide dark">
-      <img class="logo" src="../assets/brand/logo-lockup-white.svg" alt="Golgotha Academy" />
+      <img class="logo" src="../assets/brand/logo-lockup-white.png" alt="Golgotha Academy" />
+      <div class="quote">"Leer bien es una forma de servir mejor."</div>
+      <p>Slide de cita o pregunta grande con contraste oscuro.</p>
+      <div class="note">Fondo: grid-dark.png</div>
+    </section>
+
+    <section class="slide green">
+      <img class="logo" src="../assets/brand/logo-lockup-white.png" alt="Golgotha Academy" />
       <div class="kicker">Cierre</div>
-      <h1>Leer bien es una forma de servir mejor</h1>
-      <p>Próximo paso: preparar una observación breve del pasaje asignado.</p>
+      <h1>Practica con el pasaje asignado</h1>
+      <p>Proximo paso: preparar una observacion breve y una pregunta honesta para discusion.</p>
     </section>
   </main>
 </body>
